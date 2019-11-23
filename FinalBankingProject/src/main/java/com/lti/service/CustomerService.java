@@ -5,25 +5,28 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.lti.Interface.CustomerInterface;
+
 import com.lti.entity.Customer;
 
+import com.lti.repository.CustomerRepository;
+
+
 @Service
-public class CustomerService 
-{
-	@Autowired
-	private CustomerInterface customerinterface;
+public class CustomerService {
 
 	@Autowired
-	private SendMailService sendMailService; 
+	private CustomerRepository customerRepository;
 	
-	
-	public void register(Customer customer) 
+	public void register(Customer cust)
 	{
-		//add some business logic before adding to the database
 		
-		customerinterface.addNewCustomer(customer);
-		//sendMailService.send(cust.getEmail(),"Thank You", "We thank you for registering with us.");
-		sendMailService.send(customer.getEmailId(), "Registration"," Thank You  for registering with us.");
+		customerRepository.addNewCustomer(cust);
 	}
-
+	
+	@Transactional
+	public String checkLogin(String username, String password) {
+		return customerRepository.readUserLogin(username, password);
+		
+	}
 }
+

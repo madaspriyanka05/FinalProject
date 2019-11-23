@@ -24,6 +24,23 @@ public class CustomerRepository
 			
 			entityManager.persist(cust);
 		}
+
+		public String readUserLogin(String username, String password) 
+		{
+			String qu="select a from Customer as a where a.emailId=:username and a.password=:password";
+			Query q1=entityManager.createQuery(qu);
+			q1.setParameter("username",username);
+			q1.setParameter("password",password);
+			List list=q1.getResultList();
+			if((list!=null)&&(list.size()>0))
+			{
+				System.out.println("Approved");
+				return "Approved";
+			}
+			
+			System.out.println("Wrong Username and Password");
+			return "Wrong Username";
+		}
 		
 	
 	

@@ -16,8 +16,8 @@ public class NetBankAccount
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "seq")
 	@SequenceGenerator(sequenceName = "netbankaccount_seq", name = "seq", allocationSize = 1)
-	
 	private int id;
+	
 	private String username;
 	private String netPassword;
 	private String transactionPassword;

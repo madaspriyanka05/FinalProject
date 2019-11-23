@@ -82,7 +82,7 @@
                 <br><br><br>
                 <img src="images/img2.jpg" width="30" height="20" alt="" class="fl" />
                 <p>
-                    The Payments and Transfers tab enables you to make online Transactionsusig funds in your Accounts.
+                    The Payments and Transfers tab enables you to make online Transactions using funds in your Accounts.
                     You can transfer funds to any Accounts.
                 </p>
             </div>

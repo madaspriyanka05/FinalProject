@@ -15,7 +15,7 @@
     <div class="yellow-square">
 
 
-        <form  action="/FinalBankingProject/register" method="POST">
+        <form  action="register.lti" method="POST">
             <h1 align="center">Registration Form</h1>
             <table align="center" cellpadding="15" >
                 <tr>
