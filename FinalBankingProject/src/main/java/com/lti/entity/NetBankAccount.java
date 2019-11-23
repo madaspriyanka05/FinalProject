@@ -91,6 +91,4 @@ public class NetBankAccount
 				+ securityAns + ", netbankingaccount=" + netbankingaccount + "]";
 	}
 	
-	
-	
 }

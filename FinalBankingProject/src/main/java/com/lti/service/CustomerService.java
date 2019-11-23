@@ -10,7 +10,6 @@ import com.lti.entity.Customer;
 
 import com.lti.repository.CustomerRepository;
 
-
 @Service
 public class CustomerService {
 

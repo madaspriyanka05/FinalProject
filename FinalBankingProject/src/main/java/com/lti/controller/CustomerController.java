@@ -18,8 +18,6 @@ public class CustomerController {
 	@RequestMapping(path = "register.lti", method = RequestMethod.POST)
 	public String register(Customer cust)
 	{
-
-		
 		customerService.register(cust);
 		
 		return "index.jsp";

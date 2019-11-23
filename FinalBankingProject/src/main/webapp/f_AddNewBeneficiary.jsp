@@ -95,7 +95,7 @@ Author : Jyoti Dixit
               <li class="quick-link"><a href="#">Fund Transfer</a></li>
               <li class="quick-link"><a href="#">Other Payments</a></li>
               <li class="quick-link"><a href="#">Last 10 Transactions</a></li>
-              <li class="quick-link"><a href="#">Login</a></li>
+              <li class="quick-link"><a href="f_AddNetBankingAcc.jsp">Login/Register</a></li>
             </ul>
         </div>
       </div>

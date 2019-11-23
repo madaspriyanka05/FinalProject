@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>sRishTi Banking Services</title>
+<title>Jan Dhan Banking Services</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link href="f_style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -12,7 +12,7 @@
   <div class="header">
     <div class="header_resize">
       <div class="logo">
-        <h1><a href="index.html">sRish<span>Ti</span></a> 
+        <h1><a href="index.html"><span>Jan Dhan</span></a> 
         	<small>Simple banking services</small></h1>
       </div>
       <div class="menu_nav">
@@ -28,7 +28,7 @@
             <span>
             <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" placeholder="Search our site:" type="text" />
             </span>
-            <input name="button_search" src="images/search_btn.gif" class="button_search" type="image" />
+            <input name="button_search" src="f_images/search_btn.gif" class="button_search" type="image" />
           </form>
         </div>
       </div>
@@ -40,38 +40,38 @@
       <div class="mainbar">
         <div class="article">
             <br>
-            <form action="" method="POST">
+            <form action="neft.lti" method="POST">
                     <table id="funds">
                             <caption>Initiate NEFT Transaction</caption>
                             <tr><td>&nbsp;</td></tr>
                             <tr>
                                 <td><h3>From Account Name:<h3></h3></td>
-                                <td><input type="text" placeholder="Minions" id="RTGSfromAccName"></td>
+                                <td><input type="text" name="" placeholder="Minions" id="RTGSfromAccName"></td>
                             </tr>
                             <tr>
                                 <td><h3>From Account Number:<h3></h3></td>
-                                <td><input type="text" placeholder="123456789" id="RTGSfromAccNumber"></td>
+                                <td><input type="text" name="" placeholder="123456789" id="RTGSfromAccNumber"></td>
                             </tr>
                             <tr>
                                 <td><h3>To Account Name:<h3></h3></td>
-                                <td><input type="text" placeholder="Minions" id="RTGStoAccName"></td>
+                                <td><input type="text" name="" placeholder="Minions" id="RTGStoAccName"></td>
                             </tr>
                             <tr>
                                     <td><h3>To Account Number:<h3></h3></td>
-                                    <td><input type="text" placeholder="123456789" id="RTGStoAccNumber"></td>
+                                    <td><input type="text" name="" placeholder="123456789" id="RTGStoAccNumber"></td>
                                 </tr>
                             <tr>
                                 <td><h3>Amount:<h3></h3></td>
-                                <td><input type="text" placeholder="100" id="RTGSamount"></td>
+                                <td><input type="text" name="amount" placeholder="100" id="RTGSamount"></td>
                             </tr>
                             <tr>
                                 <td><h3>Remark:<h3></h3></td>
-                                <td><input type="text" placeholder="Remark" id="RTGSremark"></td>
+                                <td><input type="text" name="" placeholder="Remark" id="RTGSremark"></td>
                             </tr>
                             <tr><td>&nbsp;</td></tr>
                             <tr>
                                 <th><input type="submit" value="SUBMIT"></th>
-                                <th><input type="submit" value="RESET"></th>
+                                <th><input type="reset" value="RESET"></th>
                             </tr>
                         </table>
                 </form>

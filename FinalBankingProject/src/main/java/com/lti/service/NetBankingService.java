@@ -2,23 +2,27 @@ package com.lti.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import com.lti.Interface.NetBankingInterface;
 import com.lti.entity.NetBankAccount;
+import com.lti.repository.NetBankingRepository;
 
 @Service
 public class NetBankingService 
 {
 	@Autowired
-	private NetBankingInterface netbankinginterface;
+	private NetBankingRepository netBankingRepo;
 	
-	public void addNetBanking(NetBankAccount netbankingobj)
+	public void registerAdd(NetBankAccount netAcc)
 	{
-		netbankinginterface.addNetBankingAcc(netbankingobj);
+		
+		netBankingRepo.addNetBankingAcc(netAcc);
 	}
 	
-	public void updateNetBanking(NetBankAccount netbankingobj)
+	@Transactional
+	public String checkLogin(String username, String netPassword) 
 	{
-		netbankinginterface.updateNetBankingAcc(netbankingobj);
+		//return netBankingRepo.getNetBankingLogin(username, netPassword);	
+		return null;
 	}
 }
