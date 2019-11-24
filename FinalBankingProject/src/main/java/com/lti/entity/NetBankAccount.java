@@ -10,7 +10,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="NetBankAccount")
+@Table(name="NetBankingAccount")
 public class NetBankAccount 
 {
 	@Id
@@ -20,7 +20,7 @@ public class NetBankAccount
 	
 	private String username;
 	private String netPassword;
-	private String transactionPassword;
+	private String TRANSCATIONPASSWORD;
 	private String securityQues;
 	private String securityAns;
 	
@@ -53,11 +53,11 @@ public class NetBankAccount
 	}
 
 	public String getTransactionPassword() {
-		return transactionPassword;
+		return TRANSCATIONPASSWORD;
 	}
 
 	public void setTransactionPassword(String transactionPassword) {
-		this.transactionPassword = transactionPassword;
+		this.TRANSCATIONPASSWORD = transactionPassword;
 	}
 
 	public String getSecurityQues() {
@@ -87,7 +87,7 @@ public class NetBankAccount
 	@Override
 	public String toString() {
 		return "NetBankAccount [id=" + id + ", username=" + username + ", netPassword=" + netPassword
-				+ ", transactionPassword=" + transactionPassword + ", securityQues=" + securityQues + ", securityAns="
+				+ ", transactionPassword=" + TRANSCATIONPASSWORD + ", securityQues=" + securityQues + ", securityAns="
 				+ securityAns + ", netbankingaccount=" + netbankingaccount + "]";
 	}
 	

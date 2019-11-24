@@ -15,7 +15,7 @@ public class NetBankingController
 	@Autowired
 	private NetBankingService netBankingService;
 	
-	@RequestMapping(path = "AddNetBanking.lti", method = RequestMethod.POST)
+	@RequestMapping(path = "f_AddNetBankingAcc.lti", method = RequestMethod.POST)
 	public String register(NetBankAccount netbank)
 	{
 		netBankingService.registerAdd(netbank);

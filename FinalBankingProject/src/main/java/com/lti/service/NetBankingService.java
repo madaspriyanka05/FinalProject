@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.lti.Interface.NetBankingInterface;
 import com.lti.entity.NetBankAccount;
 import com.lti.repository.NetBankingRepository;
 
@@ -11,12 +12,12 @@ import com.lti.repository.NetBankingRepository;
 public class NetBankingService 
 {
 	@Autowired
-	private NetBankingRepository netBankingRepo;
+	private NetBankingInterface netBankingInterface;
 	
 	public void registerAdd(NetBankAccount netAcc)
 	{
 		
-		netBankingRepo.addNetBankingAcc(netAcc);
+		netBankingInterface.addNetBankingAcc(netAcc);
 	}
 	
 	@Transactional

@@ -17,8 +17,8 @@
     </head>
 
 
-    <form method="post" action="">
-        <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
+    <form method="post" action="Login.lti">
+        <p><input type="text" name="emailId" value="" placeholder="Username or Email"></p>
         <p><input type="password" name="password" value="" placeholder="Password"></p>
         <p class="remember_me">
             <label>

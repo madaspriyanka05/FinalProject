@@ -39,12 +39,16 @@
       <div class="mainbar">
         <div class="article">
             <br>
-            <form action="AddNetBanking.lti" method="POST">
+            <form action="f_AddNetBankingAcc.lti" method="POST">
                 <table id="funds">
                         <tr>
                             <th><h2>REGISTER FOR NET-BANKING</h2></th>
                         </tr>
                         <tr><td>&nbsp;</td></tr>
+                        <tr>
+                            <td><h3>ID:<h3></h3></td>
+                            <td><input type="text" placeholder="Minions" name="id" id="id"></td>
+                        </tr>
                         <tr>
                             <td><h3>USERNAME:<h3></h3></td>
                             <td><input type="text" placeholder="Minions" name="username" id="beneficiaryName"></td>
@@ -55,7 +59,7 @@
                         </tr>
                         <tr>
                             <td><h3>TRANSACTION PASSWORD:<h3></h3></td>
-                            <td><input type="password" placeholder="123456789" name="transcationPassword" id="beneficiaryReAccNumber"></td>
+                            <td><input type="password" placeholder="123456789" name="TRANSCATIONPASSWORD" id="beneficiaryReAccNumber"></td>
                         </tr>
                         <tr>
                           <td><h3>SECURITY QUESTION:<h3></h3></td>
@@ -71,6 +75,12 @@
                         <td><h3>SECURITY ANSWER:<h3></h3></td>
                         <td><input type="text" placeholder="Minions" name="securityAns" id="beneficiaryName"></td>
                       </tr>
+                      
+                      <tr>
+                        <td><h3>Acc:<h3></h3></td>
+                        <td><input type="text" placeholder="Minions" name="accountId" id="beneficiaryName"></td>
+                      </tr>
+                      
                         <tr><td>&nbsp;</td></tr>
                         <tr>
                             <th colspan="2"><input type="submit" value="Save As Beneficiary"></th>

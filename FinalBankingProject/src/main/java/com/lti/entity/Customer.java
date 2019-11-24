@@ -27,7 +27,7 @@ public class Customer
 	private String gender;
 	private LocalDate dateofbirth;
 	private int aadhar;
-	private String emailId;
+	private String emailId;		// This has to be unique
 	private int mobileNo;
 	private String address;
 	private String fathername;
@@ -35,7 +35,6 @@ public class Customer
 	private double income;
 	private String state;
 	private int zipcode ;
-
 	private String password;
 	
 	@OneToOne(mappedBy="customer",cascade=CascadeType.ALL)

@@ -21,9 +21,9 @@ public class CustomerController {
 		customerService.register(cust);
 		
 		return "index.jsp";
-}
+	}
 
-	@RequestMapping(path = "register.lti", method = RequestMethod.POST)
+	@RequestMapping(path = "login.lti", method = RequestMethod.POST)
 	public String login(@RequestParam("username") String username, @RequestParam("password") String password) {
 
 		String role = customerService.checkLogin(username,password);

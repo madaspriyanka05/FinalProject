@@ -13,7 +13,7 @@ public class BeneficiaryService implements BeneficiaryInterface
 {
 
 	public void addNewBeneficiary(Beneficiary beneficiaryobj) {
-		// TODO Auto-generated method stub
+
 		
 	}
 
