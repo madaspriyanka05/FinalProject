@@ -1,21 +1,50 @@
 package com.lti.repository;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
+import javax.persistence.PersistenceContext;
 
+import org.springframework.stereotype.Component;
+
+import com.lti.Interface.NEFTRepoInterface;
 import com.lti.entity.Account;
 import com.lti.entity.Transaction;
 
-public class NEFTrepository extends GenericDao
+@Component("NEFTrepo")
+public class NEFTrepository implements NEFTRepoInterface
 {
-	public List<Account> fetchByType(String type)
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	public void newWithdraw(int acno, double amount) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void newDeposit(int acno, double amount) {
+		entityManager.merge(acno);
+	}
+
+	public void newTransfer(int fromAcno, int toAcno, double amount) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public List<Account> getNewAccountsByType(String type) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<Transaction> newMiniStatement(int acno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	
+	
+	/*public List<Account> fetchByType(String type)
 	{
 		
 		EntityManagerFactory emf= Persistence.createEntityManagerFactory("oracleTest");
@@ -89,5 +118,5 @@ public class NEFTrepository extends GenericDao
 		emf.close();
 		
 		return transactions;
-	}
+	}*/
 }

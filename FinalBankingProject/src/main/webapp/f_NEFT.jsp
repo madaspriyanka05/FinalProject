@@ -42,32 +42,40 @@
             <br>
             <form action="f_NEFT.lti" method="POST">
                     <table id="funds">
-                            <caption>Initiate NEFT Transaction</caption>
+                            <caption>Initiate (NEFT) Transaction</caption>
                             <tr><td>&nbsp;</td></tr>
-                            <tr>
+                            <!-- <tr>
                                 <td><h3>From Account Name:<h3></h3></td>
                                 <td><input type="text" name="" placeholder="Minions" id="RTGSfromAccName"></td>
                             </tr>
                             <tr>
                                 <td><h3>From Account Number:<h3></h3></td>
                                 <td><input type="text" name="" placeholder="123456789" id="RTGSfromAccNumber"></td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <td><h3>To Account Name:<h3></h3></td>
-                                <td><input type="text" name="" placeholder="Minions" id="RTGStoAccName"></td>
+                                <td><input type="text" name="TOACCOUNTNAME" placeholder="Minions" id="RTGStoAccName"></td>
                             </tr>
                             <tr>
                                     <td><h3>To Account Number:<h3></h3></td>
-                                    <td><input type="text" name="" placeholder="123456789" id="RTGStoAccNumber"></td>
+                                    <td><input type="text" name="TOACCOUNTID" placeholder="123456789" id="RTGStoAccNumber"></td>
                                 </tr>
+                             <tr>
+                                <td><h3>Type of Payment:<h3></h3></td>
+                                <td><input type="text" name="ttype" placeholder="NEFT" id="RTGSamount"></td>
+                            </tr>
                             <tr>
                                 <td><h3>Amount:<h3></h3></td>
                                 <td><input type="text" name="amount" placeholder="100" id="RTGSamount"></td>
                             </tr>
                             <tr>
+                                <td><h3>Date:<h3></h3></td>
+                                <td><input type="text" name="DATEANDTIME" placeholder="24-11-2019" id="RTGSamount"></td>
+                            </tr>
+                            <!-- <tr>
                                 <td><h3>Remark:<h3></h3></td>
                                 <td><input type="text" name="" placeholder="Remark" id="RTGSremark"></td>
-                            </tr>
+                            </tr> -->
                             <tr><td>&nbsp;</td></tr>
                             <tr>
                                 <th><input type="submit" value="SUBMIT"></th>
@@ -97,7 +105,7 @@
               <li class="quick-link"><a href="#">Fund Transfer</a></li>
               <li class="quick-link"><a href="#">Other Payments</a></li>
               <li class="quick-link"><a href="#">Last 10 Transactions</a></li>
-              <li class="quick-link"><a href="#">Login</a></li>
+              <li class="quick-link"><a href="#">Logout</a></li>
             </ul>
         </div>
       </div>

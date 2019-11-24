@@ -14,7 +14,7 @@ import com.lti.entity.Transaction;
 import com.lti.service.NEFTservice;
 
 @Controller
-public class NEFTcontroller implements NEFTServiceInterface 
+public class NEFTcontroller
 {
 	
 	@Autowired
@@ -23,35 +23,9 @@ public class NEFTcontroller implements NEFTServiceInterface
 	@RequestMapping(path = "f_NEFT.lti", method = RequestMethod.POST)
 	public String register(Transaction t)
 	{
-		neftServiceInterface.deposit(7707, 1000);
+		neftServiceInterface.deposit(7707, 1212);
 		
 		return "f_paymentMode.jsp";
 		
 	}
-
-	public void withdraw(int acno, double amount) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void deposit(int acno, double amount) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void transfer(int fromAcno, int toAcno, double amount) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public List<Account> getAccountsByType(String type) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public List<Transaction> miniStatement(int acno) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }

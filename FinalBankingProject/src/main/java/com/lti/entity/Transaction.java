@@ -19,12 +19,19 @@ public class Transaction
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "seq")
 	@SequenceGenerator(sequenceName = "transaction1_seq", name = "seq", allocationSize = 1)
 	private int tid;
-			
+	
 	private double amount;
 	
-	private String type;
+	private String ttype;
 
-	private LocalDateTime dateTime;
+	private LocalDateTime DATEANDTIME;
+	
+	/////Just for Fun//////////////////
+	
+	private String TOACCOUNTNAME;
+	private long TOACCOUNTID;
+	
+	/////Just for Fun//////////////////
 	
 	@ManyToOne
 	@JoinColumn(name="fromaccountId", nullable=false)
@@ -50,20 +57,12 @@ public class Transaction
 		this.amount = amount;
 	}
 
-	public String getType() {
-		return type;
+	public LocalDateTime getDATEANDTIME() {
+		return DATEANDTIME;
 	}
 
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public LocalDateTime getDateTime() {
-		return dateTime;
-	}
-
-	public void setDateTime(LocalDateTime dateTime) {
-		this.dateTime = dateTime;
+	public void setDATEANDTIME(LocalDateTime dATEANDTIME) {
+		DATEANDTIME = dATEANDTIME;
 	}
 
 	public Account getAccount() {
@@ -82,9 +81,36 @@ public class Transaction
 		this.toAccount = toAccount;
 	}
 
+	//////////////////////////////
+	
+	public String getTtype() {
+		return ttype;
+	}
+
+	public void setTtype(String ttype) {
+		this.ttype = ttype;
+	}
+	
+	public String getTOACCOUNTNAME() {
+		return TOACCOUNTNAME;
+	}
+
+	public void setTOACCOUNTNAME(String tOACCOUNTNAME) {
+		TOACCOUNTNAME = tOACCOUNTNAME;
+	}
+
+	public long getTOACCOUNTID() {
+		return TOACCOUNTID;
+	}
+
+	public void setTOACCOUNTID(long tOACCOUNTID) {
+		TOACCOUNTID = tOACCOUNTID;
+	}
+	/////////////////////////////////////
+
 	@Override
 	public String toString() {
-		return "Transaction [tid=" + tid + ", amount=" + amount + ", type=" + type + ", dateTime=" + dateTime
+		return "Transaction [tid=" + tid + ", amount=" + amount + ", type=" + ttype + ", dateTime=" + DATEANDTIME
 				+ ", account=" + account + ", toAccount=" + toAccount + "]";
 	}
 	
