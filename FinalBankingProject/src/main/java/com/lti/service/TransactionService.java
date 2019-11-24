@@ -25,6 +25,11 @@ public class TransactionService
 		Transaction transaction = new Transaction();
 		
 		String ttype = data.getTtype();
+<<<<<<< HEAD
+//		long fromAccNo = customer.get
+		return transaction;
+}
+=======
 		
 		long fromAccNo = customer.getAccountNo();
 		Account fromAccount =  (Account)genericRepo.fetchById(Account.class, fromAccNo);
@@ -81,4 +86,5 @@ public class TransactionService
 		
 		return transaction;
 	}
+>>>>>>> branch 'master' of https://github.com/madaspriyanka05/FinalProject.git
 }

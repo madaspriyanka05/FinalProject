@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+
+         .wrapper {
+            text-align: center;
+        }
+        
+        body {
+            font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+            color: #404040;
+            background: #0ca3d2;
+        }
+.foll {
+            border: solid black;
+            top: 25%;
+            left: 25%;
+            width: 15%;
+        }
