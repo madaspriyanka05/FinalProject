@@ -19,4 +19,5 @@ public interface CustomerInterface
 	public void deleteNewCustomer(Customer customer);
 	
 	public List<Customer> getCustomersList();
-	}
+	public int readLogin(String e,String p);
+}

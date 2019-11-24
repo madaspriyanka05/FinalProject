@@ -18,5 +18,7 @@ public class TransactionService
 		Transaction transaction = new Transaction();
 		
 		String ttype = data.getTtype();
-		long fromAccNo = customer.get
+//		long fromAccNo = customer.get
+		return transaction;
+}
 }

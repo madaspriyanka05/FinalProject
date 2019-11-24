@@ -20,9 +20,16 @@
                     <!-- Navigation -->
 
                     <ul>
+                    
+                        <li class="W3-BAR"><a href="index.html">My Accounts</a></li>
+                        <li class="w3-bar-item"><a href="">Account Statement</a></li>
+                        <li class="w3-bar-item"><a href="f_Index.jsp">Funds Transfer</a></li>
+                        <li class="w3-bar-item"><a href="">My Profile</a></li>
+                        <li class="w3-bar-item"><a href="">Change UserId/Password</a></li>
                         <li class="w3-bar-item"><a href="Register.jsp">Register</a></li>
                         <li class="w3-bar-item"><a href="Login.jsp">Login</a></li>
-                	 </ul>
+                        <li class="w3-bar-item"><a href="LogOut.jsp">LogOut</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -38,6 +45,7 @@
                             <li><a href="AccountSummary">Account Summary</a></li>
                             <li><a href="f_Index.jsp">Fund Transfer</a></li>
                             <li><a href="AccountStatement">Account Statement</a></li>
+                            <li><a href="LogOut.jsp">LogOut</a></li>
                         </ul>
                     </div>
                 </div>
