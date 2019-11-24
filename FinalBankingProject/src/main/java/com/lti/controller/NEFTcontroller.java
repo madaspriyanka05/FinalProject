@@ -20,12 +20,12 @@ public class NEFTcontroller
 	@Autowired
 	private NEFTServiceInterface neftServiceInterface;
 	
-	@RequestMapping(path = "f_NEFT.lti", method = RequestMethod.POST)
+	/*@RequestMapping(path = "f_NEFT.lti", method = RequestMethod.POST)
 	public String register(Transaction t)
 	{
 		neftServiceInterface.deposit(7707, 1212);
 		
 		return "f_paymentMode.jsp";
 		
-	}
+	}*/
 }

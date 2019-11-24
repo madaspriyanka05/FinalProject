@@ -33,24 +33,14 @@ public class Transaction
 	private String TOACCOUNTNAME;
 	private long TOACCOUNTID;
 	
-	@OneToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="fromaccountId")
+	@ManyToOne(cascade=CascadeType.MERGE)
+	@JoinColumn(name="ACCOUNTID")
 	private Account fromAccount;
 	
-	@OneToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="toaccountId")
+	@ManyToOne(cascade=CascadeType.MERGE)
+	@JoinColumn(name="TOACCOUNTID")
 	private Account toAccount;
-	
-	/////Just for Fun//////////////////
-	/*
-	@ManyToOne
-	@JoinColumn(name="fromaccountId", nullable=false)
-	private Account account;
 
-	@ManyToOne
-	@JoinColumn(name="toaccountId", nullable=false)
-	private Account toAccount;
-*/
 	public int getTid() {
 		return tid;
 	}
@@ -67,24 +57,6 @@ public class Transaction
 		this.amount = amount;
 	}
 
-	public LocalDateTime getDATEANDTIME() {
-		return DATEANDTIME;
-	}
-
-	public void setDATEANDTIME(LocalDateTime dATEANDTIME) {
-		DATEANDTIME = dATEANDTIME;
-	}
-	
-	public Account getToAccount() {
-		return toAccount;
-	}
-
-	public void setToAccount(Account toAccount) {
-		this.toAccount = toAccount;
-	}
-
-	//////////////////////////////
-	
 	public String getTtype() {
 		return ttype;
 	}
@@ -92,7 +64,15 @@ public class Transaction
 	public void setTtype(String ttype) {
 		this.ttype = ttype;
 	}
-	
+
+	public LocalDateTime getDATEANDTIME() {
+		return DATEANDTIME;
+	}
+
+	public void setDATEANDTIME(LocalDateTime dATEANDTIME) {
+		DATEANDTIME = dATEANDTIME;
+	}
+
 	public String getTOACCOUNTNAME() {
 		return TOACCOUNTNAME;
 	}
@@ -108,7 +88,6 @@ public class Transaction
 	public void setTOACCOUNTID(long tOACCOUNTID) {
 		TOACCOUNTID = tOACCOUNTID;
 	}
-	
 
 	public Account getFromAccount() {
 		return fromAccount;
@@ -117,14 +96,26 @@ public class Transaction
 	public void setFromAccount(Account fromAccount) {
 		this.fromAccount = fromAccount;
 	}
-	/////////////////////////////////////
 
+	public Account getToAccount() {
+		return toAccount;
+	}
 
-	/*@Override
-	public String toString() {
-		return "Transaction [tid=" + tid + ", amount=" + amount + ", type=" + ttype + ", dateTime=" + DATEANDTIME
-				+ ", account=" + account + ", toAccount=" + toAccount + "]";
-	}*/
+	public void setToAccount(Account toAccount) {
+		this.toAccount = toAccount;
+	}
+	
+	/////Just for Fun//////////////////
+	/*
+	@ManyToOne
+	@JoinColumn(name="fromaccountId", nullable=false)
+	private Account account;
+
+	@ManyToOne
+	@JoinColumn(name="toaccountId", nullable=false)
+	private Account toAccount;
+*/
+
 	
 	
 }
