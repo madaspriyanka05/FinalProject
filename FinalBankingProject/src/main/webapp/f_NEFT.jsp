@@ -40,7 +40,7 @@
       <div class="mainbar">
         <div class="article">
             <br>
-            <form action="neft.lti" method="POST">
+            <form action="f_NEFT.lti" method="POST">
                     <table id="funds">
                             <caption>Initiate NEFT Transaction</caption>
                             <tr><td>&nbsp;</td></tr>

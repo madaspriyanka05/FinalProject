@@ -5,14 +5,14 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.lti.Interface.NEFTinterface;
+import com.lti.Interface.NEFTServiceInterface;
 import com.lti.entity.Account;
 import com.lti.entity.Transaction;
 import com.lti.repository.GenericDao;
 import com.lti.repository.NEFTrepository;
 
 @Service
-public class NEFTservice implements NEFTinterface
+public class NEFTservice implements NEFTServiceInterface
 {
 	public void withdraw(int acno, double amount) {
 		GenericDao dao = new GenericDao();

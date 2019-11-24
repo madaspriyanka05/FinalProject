@@ -5,7 +5,7 @@ import java.util.List;
 import com.lti.entity.Account;
 import com.lti.entity.Transaction;
 
-public interface NEFTinterface 
+public interface NEFTServiceInterface 
 {
 	public void withdraw(int acno, double amount);
 	public void deposit(int acno, double amount);
