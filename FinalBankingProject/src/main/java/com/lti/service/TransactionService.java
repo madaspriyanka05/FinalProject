@@ -25,11 +25,11 @@ public class TransactionService
 		Transaction transaction = new Transaction();
 		
 		String ttype = data.getTtype();
-<<<<<<< HEAD
+
 //		long fromAccNo = customer.get
 		return transaction;
-}
-=======
+	}
+
 		
 		long fromAccNo = customer.getAccountNo();
 		Account fromAccount =  (Account)genericRepo.fetchById(Account.class, fromAccNo);
