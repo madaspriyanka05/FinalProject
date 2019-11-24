@@ -19,10 +19,8 @@ Author : Jyoti Dixit
   <div class="header">
     <div class="header_resize">
       <div class="logo">
-        <h1>
-        	<a href="index.html">sRish<span>Ti</span></a> 
-        	<small>Simple banking services</small>
-        </h1>
+        <h1><a href="index.html">Jan<span>Dhan</span></a> 
+        	<small>Simple banking services</small></h1>
       </div>
       <div class="menu_nav">
         <ul>
@@ -37,7 +35,7 @@ Author : Jyoti Dixit
             <span>
             <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" placeholder="Search our site:" type="text" />
             </span>
-            <input name="button_search" src="f_images/search_btn.gif" class="button_search" type="image" />
+            <input name="button_search" src="images/search_btn.gif" class="button_search" type="image" />
           </form>
         </div>
       </div>
@@ -49,24 +47,38 @@ Author : Jyoti Dixit
       <div class="mainbar">
         <div class="article">
             <br>
-            <form action="AddNewBeneficiary.lti" method="POST">
+            <form action="f_AddNewBeneficiary.lti" method="POST">
                 <table id="funds">
                         <tr>
-                            <th><h2>ADD NEW BENEFICIARY</h2></th>
+                            <th><h2>REGISTER FOR NET-BANKING</h2></th>
                         </tr>
                         <tr><td>&nbsp;</td></tr>
                         <tr>
-                            <td><h3>Beneficiary's Name:<h3></h3></td>
-                            <td><input type="text" name="name" placeholder="Minions" id="beneficiaryName"></td>
+                            <td><h3>USERNAME:<h3></h3></td>
+                            <td><input type="text" placeholder="Minions" name="username" id="beneficiaryName"></td>
                         </tr>
                         <tr>
-                            <td><h3>Beneficiary's Account Number:<h3></h3></td>
-                            <td><input type="text" name="bAccId" placeholder="123456789" id="beneficiaryAccNumber"></td>
+                            <td><h3>NET-BANKING PASSWORD:<h3></h3></td>
+                            <td><input type="password" placeholder="********" name="netPassword" id="beneficiaryAccNumber"></td>
                         </tr>
-                         <tr>
-                            <td><h3>Re-enter Beneficiary's Account Number:<h3></h3></td>
-                            <td><input type="text" name="accountId" placeholder="123456789" id="beneficiaryReAccNumber"></td>
-                        </tr> 
+                        <tr>
+                            <td><h3>TRANSACTION PASSWORD:<h3></h3></td>
+                            <td><input type="password" placeholder="********" name="transactionPassword" id="beneficiaryReAccNumber"></td>
+                        </tr>
+                        <tr>
+                          <td><h3>SECURITY QUESTION:<h3></h3></td>
+                          <td>
+                            <select>
+                              <option value="What is your favorite color ?">What is your favorite color ?</option>
+                              <option value="What is your pet name ?">What is your pet name ?</option>
+                              <option value="Which is your birthplace ?">Which is your birthplace ?</option>
+                            </select>
+                          </td>
+                      </tr>
+                      <tr>
+                        <td><h3>SECURITY ANSWER:<h3></h3></td>
+                        <td><input type="text" placeholder="Minions" name="securityAns" id="beneficiaryName"></td>
+                      </tr>
                         <tr><td>&nbsp;</td></tr>
                         <tr>
                             <th colspan="2"><input type="submit" value="Save As Beneficiary"></th>
@@ -95,7 +107,7 @@ Author : Jyoti Dixit
               <li class="quick-link"><a href="#">Fund Transfer</a></li>
               <li class="quick-link"><a href="#">Other Payments</a></li>
               <li class="quick-link"><a href="#">Last 10 Transactions</a></li>
-              <li class="quick-link"><a href="f_AddNetBankingAcc.jsp">Login/Register</a></li>
+              <li class="quick-link"><a href="#">Login</a></li>
             </ul>
         </div>
       </div>

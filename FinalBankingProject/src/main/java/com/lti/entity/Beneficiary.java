@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -21,9 +22,13 @@ public class Beneficiary
 	
 	private String name;
 	
+	@OneToOne
+	@JoinColumn(name="BENACCOUNTID")
+	private Account benAccount;
+	
 	@ManyToOne
 	@JoinColumn(name="accountId")
-	private Account  account;
+	private Account account;
 
 	public int getbAccId() {
 		return bAccId;
@@ -47,6 +52,14 @@ public class Beneficiary
 
 	public void setAccount(Account account) {
 		this.account = account;
+	}
+	
+	public Account getBenAccount() {
+		return benAccount;
+	}
+
+	public void setBenAccount(Account benAccount) {
+		this.benAccount = benAccount;
 	}
 
 	@Override

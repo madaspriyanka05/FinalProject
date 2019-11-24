@@ -19,7 +19,7 @@ public class NetBankingController
 	public String register(NetBankAccount netbank)
 	{
 		netBankingService.registerAdd(netbank);
-		return "f_IMPS.jsp";
+		return "f_paymentMode.jsp";
 	}
 
 	/*@RequestMapping(path = "login.lti", method = RequestMethod.POST)
