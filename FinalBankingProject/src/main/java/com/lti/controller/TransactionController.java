@@ -21,7 +21,7 @@ public class TransactionController
 	@Autowired
 	private TransactionService transactionService;
 	
-	@RequestMapping(path="/f_NEFT.lti")
+	@RequestMapping(path="f_NEFT.lti")
 	private String neftTransfer(Transaction data, Map model, HttpServletRequest request) 
 	{	
 		try
@@ -29,15 +29,15 @@ public class TransactionController
 			NetBankAccount customer = (NetBankAccount)request.getSession().getAttribute("customer");
 			Transaction tx = transactionService.transferAmount(data,customer);
 			model.put("transaction", tx);
-			return "mini_statement.jsp";
+			return "f_paymentMode.jsp";
 		}
 		catch(CannotCreateTransactionException ex) {
 			model.put("error", ex.getMessage());
-			return "neft.jsp";
+			return "f_NEFT.jsp";
 		}
 		catch(Exception e) {
 			model.put("error", "Transaction unsuccessful");
-			return "neft.jsp";
+			return "f_NEFT.jsp";
 		}
 	}
 }

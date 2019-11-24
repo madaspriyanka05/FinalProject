@@ -24,10 +24,12 @@ public class NetBankAccount
 	private String securityQues;
 	private String securityAns;
 	
+	private long accountNo;
+	
 	@OneToOne
 	@JoinColumn(name="accountId")
 	private Account netbankingaccount;
-
+	
 	public int getId() {
 		return id;
 	}
@@ -82,6 +84,22 @@ public class NetBankAccount
 
 	public void setNetbankingaccount(Account netbankingaccount) {
 		this.netbankingaccount = netbankingaccount;
+	}
+
+	public String getTRANSCATIONPASSWORD() {
+		return TRANSCATIONPASSWORD;
+	}
+
+	public void setTRANSCATIONPASSWORD(String tRANSCATIONPASSWORD) {
+		TRANSCATIONPASSWORD = tRANSCATIONPASSWORD;
+	}
+	
+	public long getAccountNo() {
+		return accountNo;
+	}
+
+	public void setAccountNo(long accountNo) {
+		this.accountNo = accountNo;
 	}
 
 	@Override
