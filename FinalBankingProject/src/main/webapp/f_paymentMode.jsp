@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>sRishTi Banking Services</title>
+<title>Jan Dhan Banking Services</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link href="f_style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -12,7 +12,7 @@
   <div class="header">
     <div class="header_resize">
       <div class="logo">
-        <h1><a href="index.html">sRish<span>Ti</span></a> 
+        <h1><a href="index.html"><span>Jan Dhan</span></a> 
         	<small>Simple banking services</small></h1>
       </div>
       <div class="menu_nav">
@@ -49,7 +49,7 @@
                 </tr>
                 <tr><td>&nbsp;</td></tr>
                 <tr>
-                    <th><h2>Within sRishTi</h2></th>
+                    <th><h2>Within Jan Dhan</h2></th>
                 </tr>
                 <tr>
                     <td><h3><a href="">Accounts of Others - Within sRishTi</a></h3></td>
@@ -65,13 +65,13 @@
                     <td><h3><a href="">Other Bank Transfer</a></h3></td>
                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                    <td><h3><a href="IMPS.html">IMPS Funds Transfer</a></h3></td>
+                    <td><h3><a href="f_IMPS.jsp">IMPS Funds Transfer</a></h3></td>
                 </tr>
                 <tr>
-                    <td><h3><a href="NEFT.html">NEFT Funds Transfer</a></h3></td>
+                    <td><h3><a href="f_NEFT.jsp">NEFT Funds Transfer</a></h3></td>
                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                    <td><h3><a href="RTGS.html">RTGS Funds Transfer</a></h3></td>
+                    <td><h3><a href="f_RTGS.jsp">RTGS Funds Transfer</a></h3></td>
                 </tr>
             </table>
         </div>
@@ -80,7 +80,7 @@
                 <div class="clr"></div>
                 <img src="images/img2.jpg" width="30" height="20" alt="" class="fl" />
                 <p>
-                    The Payments and Transfers tab enables you to make online Transactionsusig funds in your Accounts.
+                    The Payments and Transfers tab enables you to make online Transactions using funds in your Accounts.
                     You can transfer funds to any Accounts.
                 </p>
             </div>
@@ -93,9 +93,8 @@
             <ul class="sb_menu">
               <li class="quick-link"><a href="#">Account Details</a></li>
               <li class="quick-link"><a href="#">Fund Transfer</a></li>
-              <li class="quick-link"><a href="#">Other Payments</a></li>
-              <li class="quick-link"><a href="#">Last 10 Transactions</a></li>
-              <li class="quick-link"><a href="f_AddNetBankingAcc.jsp">Login/Register</a></li>
+              <li class="quick-link"><a href="f_NetBankingLogin.jsp">Login</a></li>
+              <li class="quick-link"><a href="f_AddNetBankingAcc.jsp">Register</a></li>
             </ul>
         </div>
       </div>

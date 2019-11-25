@@ -25,7 +25,7 @@ public class CustomerController {
 	}
 
 	@RequestMapping(path = "login.lti", method = RequestMethod.POST)
-	public String login(@RequestParam("emialId") String username, @RequestParam("password") String password) {
+	public String login(@RequestParam("emailId") String username, @RequestParam("password") String password) {
 
 		boolean i= customerServiceInterface.checkLogin(username,password);
 		if(i)

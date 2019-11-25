@@ -5,11 +5,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.lti.Interface.NetBankingInterface;
+import com.lti.Interface.NetBankingServiceInterface;
+import com.lti.entity.Customer;
 import com.lti.entity.NetBankAccount;
 import com.lti.repository.NetBankingRepository;
 
 @Service
-public class NetBankingService 
+public class NetBankingService implements NetBankingServiceInterface
 {
 	@Autowired
 	private NetBankingInterface netBankingInterface;
@@ -21,9 +23,17 @@ public class NetBankingService
 	}
 	
 	@Transactional
-	public String checkLogin(String username, String netPassword) 
+	public boolean checkLogin(String username, String netPassword) 
 	{
-		//return netBankingRepo.getNetBankingLogin(username, netPassword);	
-		return null;
+		int result=netBankingInterface.readLogin(username, netPassword);
+		  
+		  if(result==1)
+		  {
+			  return  true;
+		  }
+		  else
+		  {
+			  return false;
+		  }
 	}
 }

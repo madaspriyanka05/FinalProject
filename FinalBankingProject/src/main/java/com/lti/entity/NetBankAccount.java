@@ -23,9 +23,6 @@ public class NetBankAccount
 	private String TRANSCATIONPASSWORD;
 	private String securityQues;
 	private String securityAns;
-	
-	private long accountNo;
-	
 	@OneToOne
 	@JoinColumn(name="accountId")
 	private Account netbankingaccount;
@@ -93,20 +90,14 @@ public class NetBankAccount
 	public void setTRANSCATIONPASSWORD(String tRANSCATIONPASSWORD) {
 		TRANSCATIONPASSWORD = tRANSCATIONPASSWORD;
 	}
-	
-	public long getAccountNo() {
-		return accountNo;
-	}
-
-	public void setAccountNo(long accountNo) {
-		this.accountNo = accountNo;
-	}
 
 	@Override
 	public String toString() {
 		return "NetBankAccount [id=" + id + ", username=" + username + ", netPassword=" + netPassword
-				+ ", transactionPassword=" + TRANSCATIONPASSWORD + ", securityQues=" + securityQues + ", securityAns="
+				+ ", TRANSCATIONPASSWORD=" + TRANSCATIONPASSWORD + ", securityQues=" + securityQues + ", securityAns="
 				+ securityAns + ", netbankingaccount=" + netbankingaccount + "]";
 	}
+	
+	
 	
 }

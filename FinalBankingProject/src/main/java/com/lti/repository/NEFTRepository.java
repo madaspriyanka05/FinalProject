@@ -12,7 +12,7 @@ import com.lti.entity.Account;
 import com.lti.entity.Transaction;
 
 @Component("NEFTrepo")
-public class NEFTrepository implements NEFTRepoInterface
+public class NEFTRepository implements NEFTRepoInterface
 {
 	@PersistenceContext
 	private EntityManager entityManager;

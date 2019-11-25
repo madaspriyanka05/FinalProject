@@ -1,43 +1,116 @@
 package com.lti.service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.CannotCreateTransactionException;
 
 import com.lti.Interface.GenericRepositoryInterface;
+import com.lti.Interface.TransactionServiceInterface;
 import com.lti.entity.Account;
+import com.lti.entity.Beneficiary;
 import com.lti.entity.NetBankAccount;
 import com.lti.entity.Transaction;
 
 @Service
-public class TransactionService 
+public class TransactionService  implements TransactionServiceInterface
 {
 	private static final double MINIMUM_BALANCE = 1000;
 	private double charge = 0;
 	
 	@Autowired
-	private GenericRepositoryInterface genericRepo;
+	private GenericRepositoryInterface genericRepositoryInterface;
+
 	
-	public Transaction transferAmount(Transaction data, NetBankAccount customer)
+	Transaction t1 = new Transaction();
+	Transaction t2 = new Transaction();
+	
+	public Transaction transfer(NetBankAccount accid, Beneficiary baccid, Transaction transaction) 
+	{
+		
+		Account acc1 = (Account) genericRepositoryInterface.fetchData(Account.class, accid); //fromaccountid
+		Account acc2 = (Account) genericRepositoryInterface.fetchData(Account.class, baccid);//toaccountid
+		double amount =transaction.getAmount();
+		
+		if(amount<=acc1.getBalance())
+		{
+			acc1.setBalance(acc1.getBalance()-amount);//withdraw from acc1
+			acc2.setBalance(acc2.getBalance()+amount);//Transfer to account2
+			
+			
+			t1.settType("Withdraw");
+			t1.setAmount(amount);
+			t1.setToAccountId(acc1);
+			t1.setDateandtime(LocalDateTime.now());
+		
+			
+			t2.settType("Transfer");
+			t2.setAmount(amount);
+			t2.setToAccountId(acc2);
+			t2.setDateandtime(LocalDateTime.now());
+			
+			genericRepositoryInterface.upsert(acc1);
+			genericRepositoryInterface.upsert(acc2);
+			genericRepositoryInterface.upsert(t1);
+			genericRepositoryInterface.upsert(t2);
+			
+			return t2; //account2 amount transfered successfully 
+		}
+		return t1;  //account2 amount transfered successfully
+	}
+
+	public List<Transaction> transferAmount(Transaction txdata, NetBankAccount netBankAccountId, Account accountId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*public List<Transaction> transferAmount(Transaction txdata, NetBankAccount netBankAccountId, Account accountId)
 	{
 		Transaction transaction = new Transaction();
 		
-		String ttype = data.getTtype();
-
-//		long fromAccNo = customer.get
-		return transaction;
-	}
-
+		String ttype = txdata.gettType();
 		
-		long fromAccNo = customer.getAccountNo();
-		Account fromAccount =  (Account)genericRepo.fetchById(Account.class, fromAccNo);
+		Account fromAccount =  (Account)genericRepositoryInterface.fetchById(Account.class, netBankAccountId);
 		
-		long toAccNo = data.getTOACCOUNTID();
-		Account toAccount = (Account)genericRepo.fetchById(Account.class, toAccNo);
+		Account toAccId = txdata.getToAccountId();
+		Account toAccount = (Account)genericRepositoryInterface.fetchById(Account.class, toAccId);
 		
-		double amount = data.getAmount();
+		double amount = txdata.getAmount();
 		
 		//NEFT
 		if(ttype.equals("neft") || ttype.equals("NEFT"))
@@ -67,15 +140,15 @@ public class TransactionService
 				{
 					fromAccount.setBalance(balance);
 					toAccount.setBalance(toAccount.getBalance()+amount);
-					transaction.setFromAccount(fromAccount);
-					transaction.setToAccount(toAccount);
-					transaction.setTtype(data.getTtype());
+					transaction.setToAccountId(toAccount);
+					transaction.settType(txdata.gettType());
 					transaction.setAmount(amount);
-					transaction.setDATEANDTIME(LocalDateTime.now());
+					transaction.setDateandtime(LocalDateTime.now());
 					
-					genericRepo.upsert(transaction);
+					genericRepositoryInterface.upsert(transaction);
 					
-					return transaction;
+					
+					return (List<Transaction>) transaction;
 				}
 				catch(Exception e)
 				{
@@ -83,8 +156,10 @@ public class TransactionService
 				}
 			}
 		}
+		return null;
 		
-		return transaction;
+	
 	}
->>>>>>> branch 'master' of https://github.com/madaspriyanka05/FinalProject.git
+*/
+
 }

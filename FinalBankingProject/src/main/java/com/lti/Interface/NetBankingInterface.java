@@ -13,4 +13,5 @@ public interface NetBankingInterface
 	public void addNetBankingAcc(NetBankAccount netbankaccount);
 	public void updateNetBankingAcc(NetBankAccount netbankaccount);
 	public List<NetBankAccount> getNetBankingAcc();
+	public int readLogin(String e,String p);
 }

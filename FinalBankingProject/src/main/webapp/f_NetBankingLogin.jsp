@@ -12,7 +12,7 @@
   <div class="header">
     <div class="header_resize">
       <div class="logo">
-        <h1><a href="index.html">Jan<span>Dhan</span></a> 
+        <h1><a href="index.html"><span>Jan Dhan</span></a> 
         	<small>Simple banking services</small></h1>
       </div>
       <div class="menu_nav">
@@ -20,7 +20,6 @@
           <li><a href="index.html">My Accounts</a></li>
           <li><a href="">My Profile</a></li>
           <li class="active"><a href="PaymentMode.html">Payments/Transfers</a></li>
-          <li><a href="">e-Services</a></li>
           <li><a href="">Enquiries</a></li>
         </ul>
         <div class="searchform">
@@ -28,7 +27,7 @@
             <span>
             <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" placeholder="Search our site:" type="text" />
             </span>
-            <input name="button_search" src="images/search_btn.gif" class="button_search" type="image" />
+            <input name="button_search" src="f_images/search_btn.gif" class="button_search" type="image" />
           </form>
         </div>
       </div>
@@ -40,7 +39,7 @@
       <div class="mainbar">
         <div class="article">
             <br>
-            <form action="f_NetBankingLogin.html" method="POST">
+            <form action="f_NetBankingLogin.lti" method="POST">
                 <table id="funds">
                         <tr>
                             <th><h2>Login Using Your Net-Banking Credentials</h2></th>
@@ -56,7 +55,7 @@
                         </tr>
                         <tr><td>&nbsp;</td></tr>
                         <tr>
-                            <th colspan="2"><input type="submit" value="Save As Beneficiary"></th>
+                            <th colspan="2"><input type="submit" value="Login here to transfer funds"></th>
                         </tr>
                         <tr><td></td></tr><tr><td></td></tr>
                 </table>
@@ -65,7 +64,7 @@
         <div class="article">
                     <table>
                       <tr>
-                        <th colspan="2"><a href="f_AddNetBankingAcc.html"><input type="submit" value="Click here to register for Net-Banking services"></a></th>
+                        <th colspan="2"><a href="f_AddNetBankingAcc.jsp"><input type="submit" value="Click here to register for Net-Banking services"></a></th>
                       </tr>
                     </table>
                   </div>
@@ -88,8 +87,6 @@
             <ul class="sb_menu">
               <li class="quick-link"><a href="#">Account Details</a></li>
               <li class="quick-link"><a href="#">Fund Transfer</a></li>
-              <li class="quick-link"><a href="#">Other Payments</a></li>
-              <li class="quick-link"><a href="#">Last 10 Transactions</a></li>
               <li class="quick-link"><a href="#">Logout</a></li>
             </ul>
         </div>

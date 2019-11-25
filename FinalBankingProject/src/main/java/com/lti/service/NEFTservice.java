@@ -13,7 +13,7 @@ import com.lti.Interface.NEFTRepoInterface;
 import com.lti.Interface.NEFTServiceInterface;
 import com.lti.entity.Account;
 import com.lti.entity.Transaction;
-import com.lti.repository.NEFTrepository;
+import com.lti.repository.NEFTRepository;
 
 @Service("NEFTservice")
 public class NEFTservice implements NEFTServiceInterface

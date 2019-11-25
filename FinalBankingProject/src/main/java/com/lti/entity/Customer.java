@@ -26,15 +26,15 @@ public class Customer
 	private String lastname;
 	private String gender;
 	private LocalDate dateofbirth;
-	private int aadhar;
+	private long aadhar;
 	private String emailId;		// This has to be unique
-	private int mobileNo;
+	private long mobileNo;
 	private String address;
 	private String fathername;
 	private String occType;
 	private double income;
 	private String state;
-	private int zipcode ;
+	private long zipcode ;
 	private String password;
 	
 	@OneToOne(mappedBy="customer",cascade=CascadeType.ALL)
@@ -88,11 +88,11 @@ public class Customer
 		this.dateofbirth = dateofbirth;
 	}
 
-	public int getAadhar() {
+	public long getAadhar() {
 		return aadhar;
 	}
 
-	public void setAadhar(int aadhar) {
+	public void setAadhar(long aadhar) {
 		this.aadhar = aadhar;
 	}
 
@@ -104,11 +104,11 @@ public class Customer
 		this.emailId = emailId;
 	}
 
-	public int getMobileNo() {
+	public long getMobileNo() {
 		return mobileNo;
 	}
 
-	public void setMobileNo(int mobileNo) {
+	public void setMobileNo(long mobileNo) {
 		this.mobileNo = mobileNo;
 	}
 
@@ -152,11 +152,11 @@ public class Customer
 		this.state = state;
 	}
 
-	public int getZipcode() {
+	public long getZipcode() {
 		return zipcode;
 	}
 
-	public void setZipcode(int zipcode) {
+	public void setZipcode(long zipcode) {
 		this.zipcode = zipcode;
 	}
 
@@ -176,15 +176,7 @@ public class Customer
 		this.customeraccount = customeraccount;
 	}
 
-	@Override
-	public String toString() {
-		return "Customer [id=" + id + ", firstname=" + firstname + ", middlename=" + middlename + ", lastname="
-				+ lastname + ", gender=" + gender + ", dateofbirth=" + dateofbirth + ", aadhar=" + aadhar + ", emailId="
-				+ emailId + ", mobileNo=" + mobileNo + ", address=" + address + ", fathername=" + fathername
-				+ ", occType=" + occType + ", income=" + income + ", state=" + state + ", zipcode=" + zipcode
-				+ ", password=" + password + ", customeraccount=" + customeraccount + "]";
-	}
-    
+
 	
    
 }

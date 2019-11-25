@@ -18,55 +18,50 @@ public class Beneficiary
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "seq")
 	@SequenceGenerator(sequenceName = "beneficiary_seq", name = "seq", allocationSize = 1)
-	private int bAccId; 
+	private int id; 
 	
-	private String name;
+	private String bName;
 	
-	@OneToOne
-	@JoinColumn(name="BENACCOUNTID")
-	private Account benAccount;
 	
 	@ManyToOne
 	@JoinColumn(name="accountId")
-	private Account account;
+	private Account bAccountId;
 
-	public int getbAccId() {
-		return bAccId;
-	}
 
-	public void setbAccId(int bAccId) {
-		this.bAccId = bAccId;
+	public int getId() {
+		return id;
 	}
 
-	public String getName() {
-		return name;
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+
+	public String getbName() {
+		return bName;
 	}
 
-	public Account getAccount() {
-		return account;
+
+	public void setbName(String bName) {
+		this.bName = bName;
 	}
 
-	public void setAccount(Account account) {
-		this.account = account;
-	}
-	
-	public Account getBenAccount() {
-		return benAccount;
+
+	public Account getbAccountId() {
+		return bAccountId;
 	}
 
-	public void setBenAccount(Account benAccount) {
-		this.benAccount = benAccount;
+
+	public void setbAccountId(Account bAccountId) {
+		this.bAccountId = bAccountId;
 	}
+
 
 	@Override
 	public String toString() {
-		return "Beneficiary [bAccId=" + bAccId + ", name=" + name + ", account=" + account + "]";
+		return "Beneficiary [id=" + id + ", bName=" + bName + ", bAccountId=" + bAccountId + "]";
 	}
-	
 	
 
 }

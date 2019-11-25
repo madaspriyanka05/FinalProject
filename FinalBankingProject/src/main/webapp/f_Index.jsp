@@ -12,7 +12,7 @@
   <div class="header">
     <div class="header_resize">
       <div class="logo">
-        <h1><a href="index.html">sRish<span>Ti</span></a> 
+        <h1><a href="index.html"><span>Jan Dhan</span></a> 
         	<small>Simple banking services</small></h1>
       </div>
       <div class="menu_nav">

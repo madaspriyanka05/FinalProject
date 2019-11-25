@@ -11,7 +11,8 @@ import com.lti.entity.Customer;
 import com.lti.repository.CustomerRepository;
 
 @Service
-public class CustomerService  implements CustomerServiceInterface {
+public class CustomerService  implements CustomerServiceInterface 
+{
 
 	@Autowired
 	private CustomerInterface customerInterface;
@@ -35,8 +36,6 @@ public class CustomerService  implements CustomerServiceInterface {
 		  return false;
 	  }
 	  
-		
 	}
-
 }
 
