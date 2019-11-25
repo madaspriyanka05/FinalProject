@@ -13,12 +13,15 @@
     <div class="header_resize">
       <div class="logo">
         <h1><a href="index.html"><span>Jan Dhan</span></a> 
-        	<small>Online Banking Services</small></h1>
+        	<small>Simple banking services</small></h1>
       </div>
       <div class="menu_nav">
         <ul>
           <li><a href="index.html">My Accounts</a></li>
+          <li><a href="">My Profile</a></li>
           <li class="active"><a href="PaymentMode.html">Payments/Transfers</a></li>
+          <li><a href="">e-Services</a></li>
+          <li><a href="">Enquiries</a></li>
         </ul>
         <div class="searchform">
           <form id="formsearch" name="formsearch" method="post" action="#">
@@ -41,31 +44,39 @@
                     <table id="funds">
                             <caption>Initiate (NEFT) Transaction</caption>
                             <tr><td>&nbsp;</td></tr>
-                            
-                             <tr>
-                                    <td><h3>From Account Id:<h3></h3></td>
-                                    <td><input type="text" name="accountId" placeholder="123456789" id="NEFTtoAccNumber"></td>
-                                </tr>
-                          	<tr>
+                            <!-- <tr>
+                                <td><h3>From Account Name:<h3></h3></td>
+                                <td><input type="text" name="" placeholder="Minions" id="RTGSfromAccName"></td>
+                            </tr>-->
+                            <tr>
+                                <td><h3>From Account Number:<h3></h3></td>
+                                <td><input type="text" name="fromaccountId" placeholder="123456789" id="RTGSfromAccNumber"></td>
+                            </tr> 
+                            <tr>
                                 <td><h3>To Account Name:<h3></h3></td>
-                                <td><input type="text" name="toAccountName" placeholder="Minions" id="RTGStoAccName"></td>
+                                <td><input type="text" name="toAccountname" placeholder="Minions" id="RTGStoAccName"></td>
                             </tr>
                             <tr>
-                                    <td><h3>To Account Id:<h3></h3></td>
-                                    <td><input type="text" name="bAccountId" placeholder="123456789" id="RTGStoAccNumber"></td>
+                                    <td><h3>To Account Number:<h3></h3></td>
+                                    <td><input type="text" name="ToaccountId" placeholder="123456789" id="RTGStoAccNumber"></td>
                                 </tr>
                              <tr>
                                 <td><h3>Type of Payment:<h3></h3></td>
-                                <td><input type="text" name="tType" placeholder="NEFT" id="RTGSamount"></td>
+                                <td><input type="text" name="ttype" placeholder="NEFT" id="RTGSamount"></td>
                             </tr>
                             <tr>
                                 <td><h3>Amount:<h3></h3></td>
                                 <td><input type="text" name="amount" placeholder="100" id="RTGSamount"></td>
                             </tr>
-                            <tr>
+                           <!--  <tr>
                                 <td><h3>Date:<h3></h3></td>
-                                <td><input type="text" name="dateandtime" placeholder="24-11-2019" id="NEFTAmount"></td>
-                            	 <tr><td>&nbsp;</td></tr>
+                                <td><input type="text" name="dateandtime" placeholder="24-11-2019" id="RTGSamount"></td>
+                            </tr> -->
+                            <!-- <tr>
+                                <td><h3>Remark:<h3></h3></td>
+                                <td><input type="text" name="" placeholder="Remark" id="RTGSremark"></td>
+                            </tr> -->
+                            <tr><td>&nbsp;</td></tr>
                             <tr>
                                 <th><input type="submit" value="SUBMIT"></th>
                                 <th><input type="reset" value="RESET"></th>
@@ -90,10 +101,11 @@
             <h2><span>Quick Links</span></h2>
             <div class="clr"></div>
             <ul class="sb_menu">
-              <li class="quick-link"><a href="u_index.jsp">Account Details</a></li>
-              <li class="quick-link"><a href="f_index.jsp">Fund Transfer</a></li>
-              <li class="quick-link"><a href="f_paymentMode.jsp">Other Payments</a></li>
-              <li class="quick-link"><a href="LogOut.jsp">Logout</a></li>
+              <li class="quick-link"><a href="#">Account Details</a></li>
+              <li class="quick-link"><a href="#">Fund Transfer</a></li>
+              <li class="quick-link"><a href="#">Other Payments</a></li>
+              <li class="quick-link"><a href="#">Last 10 Transactions</a></li>
+              <li class="quick-link"><a href="#">Logout</a></li>
             </ul>
         </div>
       </div>

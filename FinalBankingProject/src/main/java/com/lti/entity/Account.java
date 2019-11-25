@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -33,75 +34,84 @@ public class Account
 	@OneToOne
 	@JoinColumn(name="id")
 	private Customer customer;
-		
-	@OneToMany(mappedBy="account",cascade=CascadeType.ALL) //List of Transaction  
-	private List <Transaction> transactions;
-	
-	@OneToMany(mappedBy="account",cascade=CascadeType.ALL)
-	private  List <Beneficiary> beneficiary;
+
+
+	public Account(int accountId, double balance, LocalDate openDate, String status, Customer customer) {
+		super();
+		this.accountId = accountId;
+		this.balance = balance;
+		this.openDate = openDate;
+		this.status = status;
+		this.customer = customer;
+	}
+
 
 	public int getAccountId() {
 		return accountId;
 	}
 
+
 	public void setAccountId(int accountId) {
 		this.accountId = accountId;
 	}
+
 
 	public double getBalance() {
 		return balance;
 	}
 
+
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
+
 
 	public LocalDate getOpenDate() {
 		return openDate;
 	}
 
+
 	public void setOpenDate(LocalDate openDate) {
 		this.openDate = openDate;
 	}
+
 
 	public String getStatus() {
 		return status;
 	}
 
+
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
 
 	public Customer getCustomer() {
 		return customer;
 	}
 
+
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
 
-	public List<Transaction> getTransactions() {
-		return transactions;
-	}
-
-	public void setTransactions(List<Transaction> transactions) {
-		this.transactions = transactions;
-	}
-
-	public List<Beneficiary> getBeneficiary() {
-		return beneficiary;
-	}
-
-	public void setBeneficiary(List<Beneficiary> beneficiary) {
-		this.beneficiary = beneficiary;
-	}
 
 	@Override
 	public String toString() {
 		return "Account [accountId=" + accountId + ", balance=" + balance + ", openDate=" + openDate + ", status="
-				+ status + ", customer=" + customer + ", transactions=" + transactions + ", beneficiary=" + beneficiary
-				+ "]";
+				+ status + ", customer=" + customer + "]";
 	}
+		
+//	@OneToMany(mappedBy="account") //List of Transaction  
+//	public List <Transaction> transactions;
+	
+//	@OneToOne(mappedBy="account")
+//	private  Beneficiary beneficiary;
 
+	
+	
+	
+	
+	
 
 }

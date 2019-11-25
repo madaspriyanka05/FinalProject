@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.CannotCreateTransactionException;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.lti.Interface.GenericRepositoryInterface;
 import com.lti.Interface.TransactionServiceInterface;
@@ -15,9 +16,10 @@ import com.lti.entity.NetBankAccount;
 import com.lti.entity.Transaction;
 
 @Service
+
 public class TransactionService  implements TransactionServiceInterface
 {
-	private static final double MINIMUM_BALANCE = 1000;
+	private static final double MINIMUM_BALANCE = 10000;
 	private double charge = 0;
 	
 	@Autowired
@@ -25,46 +27,47 @@ public class TransactionService  implements TransactionServiceInterface
 
 	
 	Transaction t1 = new Transaction();
-	Transaction t2 = new Transaction();
 	
-	public Transaction transfer(NetBankAccount accid, Beneficiary baccid, Transaction transaction) 
+	
+	public void  transfer(int accid, int baccid ,double amount) 
 	{
 		
-		Account acc1 = (Account) genericRepositoryInterface.fetchData(Account.class, accid); //fromaccountid
-		Account acc2 = (Account) genericRepositoryInterface.fetchData(Account.class, baccid);//toaccountid
-		double amount =transaction.getAmount();
+		Account acc1 = (Account) genericRepositoryInterface.fetchById(Account.class, accid); //fromaccountid
+		Account acc2 = (Account) genericRepositoryInterface.fetchById(Account.class, baccid);//toaccountid
+		double balforacc1=acc1.getBalance();
+		//double balforacc2=acc2.getBalance();
 		
-		if(amount<=acc1.getBalance())
+		
+		if(amount>=acc1.getBalance())
 		{
 			acc1.setBalance(acc1.getBalance()-amount);//withdraw from acc1
+			
 			acc2.setBalance(acc2.getBalance()+amount);//Transfer to account2
 			
 			
 			t1.settType("Withdraw");
 			t1.setAmount(amount);
-			t1.setToAccountId(acc1);
+			
+			t1.setFromAccount(acc1);
+			t1.setToAccount(acc2);
 			t1.setDateandtime(LocalDateTime.now());
-		
 			
-			t2.settType("Transfer");
-			t2.setAmount(amount);
-			t2.setToAccountId(acc2);
-			t2.setDateandtime(LocalDateTime.now());
 			
-			genericRepositoryInterface.upsert(acc1);
-			genericRepositoryInterface.upsert(acc2);
+//			genericRepositoryInterface.upsert(acc1);//updating the remaining balance
+//			genericRepositoryInterface.upsert(acc2);//updating the transaction balance
 			genericRepositoryInterface.upsert(t1);
-			genericRepositoryInterface.upsert(t2);
+		    System.out.println("Transfered Amount to accid 2");
 			
-			return t2; //account2 amount transfered successfully 
 		}
-		return t1;  //account2 amount transfered successfully
+//		System.out.println("Insufficient Balance");
+		
 	}
 
 	public List<Transaction> transferAmount(Transaction txdata, NetBankAccount netBankAccountId, Account accountId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 
 	
 	

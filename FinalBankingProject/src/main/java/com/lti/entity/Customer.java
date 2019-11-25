@@ -1,6 +1,7 @@
 package com.lti.entity;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -10,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 @Entity
@@ -25,20 +28,27 @@ public class Customer
 	private String middlename;
 	private String lastname;
 	private String gender;
+	
+	@DateTimeFormat
 	private LocalDate dateofbirth;
 	private long aadhar;
 	private String emailId;		// This has to be unique
 	private long mobileNo;
 	private String address;
 	private String fathername;
-	private String occType;
+	
+	private String occuType;
 	private double income;
 	private String state;
 	private long zipcode ;
 	private String password;
 	
-	@OneToOne(mappedBy="customer",cascade=CascadeType.ALL)
+	@OneToOne(mappedBy="customer")
 	private Account  customeraccount;
+
+	
+	
+	
 
 	public int getId() {
 		return id;
@@ -84,8 +94,11 @@ public class Customer
 		return dateofbirth;
 	}
 
-	public void setDateofbirth(LocalDate dateofbirth) {
-		this.dateofbirth = dateofbirth;
+	public void setDateofbirth(String dateofbirth) 
+	{
+		DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		
+		this.dateofbirth = LocalDate.parse(dateofbirth, df);
 	}
 
 	public long getAadhar() {
@@ -129,11 +142,11 @@ public class Customer
 	}
 
 	public String getOccType() {
-		return occType;
+		return occuType;
 	}
 
 	public void setOccType(String occType) {
-		this.occType = occType;
+		this.occuType = occType;
 	}
 
 	public double getIncome() {

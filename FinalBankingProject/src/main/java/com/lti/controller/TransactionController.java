@@ -4,6 +4,7 @@ package com.lti.controller;
 import java.util.List;
 import java.util.Map;
 
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,25 +26,22 @@ public class TransactionController
 	@Autowired
 	private TransactionServiceInterface transactionServiceInterface;
 	
-	@SuppressWarnings("unchecked")
+
 	@RequestMapping(path="f_NEFT.lti",method=RequestMethod.POST)
-	private String neftTransfer(Transaction data, Map m, @RequestParam(name="accountId")NetBankAccount accid,@RequestParam(name="bAccountId") Beneficiary baccid ,@RequestParam(name="amount") Transaction transaction) 
+	private String neftTransfer(Transaction data, Map m, @RequestParam(name="fromaccountId") int accid,@RequestParam(name="ToaccountId") int baccid ,@RequestParam(name="amount") double amount, HttpServletRequest request) 
 	{	
 		try
 		{
-//			NetBankAccount fromAccountId = (NetBankAccount)request.getSession().getAttribute("fromAccountId");
-//			Account toAccountId = (Account)request.getSession().getAttribute("toAccountId");
-			Transaction tx = transactionServiceInterface.transfer(accid, baccid, transaction);
-			m.put("Transaction Completed Successfully",tx);
-			return "f_paymentMode.jsp";
+			//Account fromAccountId = (Account)request.getSession().getAttribute("fromaccountId");
+			//Account toAccountId = (Account)request.getSession().getAttribute("ToaccountId");
+			transactionServiceInterface.transfer(accid, baccid, amount);
+			//m.put("Transaction Completed Successfully");
+			return "f_MiniStatement.jsp";
 		}
-		catch(CannotCreateTransactionException ex) {
-			m.put("error", ex.getMessage());
-			return "f_Index.jsp";
-		}
+		
 		catch(Exception e) {
 			m.put("error", "Transaction unsuccessful");
-			return "f_Index.jsp";
+			return "Login.jsp";
 		}
 	}
 

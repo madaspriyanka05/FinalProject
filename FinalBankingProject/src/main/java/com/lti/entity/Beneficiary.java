@@ -1,5 +1,6 @@
 package com.lti.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,9 +24,24 @@ public class Beneficiary
 	private String bName;
 	
 	
+	/*
 	@ManyToOne
-	@JoinColumn(name="accountId")
-	private Account bAccountId;
+	@JoinColumn(name="accountId",nullable=false)
+	public Account baccount;
+	*/
+	
+	@OneToOne
+	@JoinColumn(name="accountId",nullable=false)
+	public Account account;
+
+
+	public Beneficiary(int id, String bName, Account baccount, Account account) {
+		super();
+		this.id = id;
+		this.bName = bName;
+		//this.baccount = baccount;
+		this.account = account;
+	}
 
 
 	public int getId() {
@@ -47,21 +63,38 @@ public class Beneficiary
 		this.bName = bName;
 	}
 
-
-	public Account getbAccountId() {
-		return bAccountId;
+/*
+	public Account getBaccount() {
+		return baccount;
 	}
 
 
-	public void setbAccountId(Account bAccountId) {
-		this.bAccountId = bAccountId;
+	public void setBaccount(Account baccount) {
+		this.baccount = baccount;
+	}
+*/
+
+	public Account getAccount() {
+		return account;
 	}
 
 
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+
+/*
 	@Override
 	public String toString() {
-		return "Beneficiary [id=" + id + ", bName=" + bName + ", bAccountId=" + bAccountId + "]";
+		return "Beneficiary [id=" + id + ", bName=" + bName + ", baccount=" + baccount + ", account=" + account + "]";
 	}
+
+*/
+
 	
+
+	
+	
+
 
 }

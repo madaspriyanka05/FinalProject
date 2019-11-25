@@ -9,7 +9,7 @@ import com.lti.entity.Transaction;
 
 public interface TransactionServiceInterface 
 {
-	 public List<Transaction> transferAmount(Transaction txdata, NetBankAccount netBankAccountId , Account accountId);
-	 public  Transaction transfer(NetBankAccount accid, Beneficiary baccid, Transaction transaction);
+	// public List<Transaction> transferAmount(Transaction txdata, NetBankAccount netBankAccountId , Account accountId);
+	 public  void transfer(int accid, int baccid, double amount);
 		
 }

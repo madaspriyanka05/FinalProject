@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -28,13 +29,37 @@ public class Transaction
 	private String tType;
 	private LocalDateTime dateandtime;
 	
-	
-	
-	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="accountId")
-	private Account toAccountId;
+	@OneToOne
+	@JoinColumn(name="toaccountid")
+	public Account toAccount;
+
+	public Account getToAccount() {
+		return toAccount;
+	}
 
 
+
+	public void setToAccount(Account toAccount) {
+		this.toAccount = toAccount;
+	}
+
+
+
+	public Account getFromAccount() {
+		return fromAccount;
+	}
+
+
+
+	public void setFromAccount(Account fromAccount) {
+		this.fromAccount = fromAccount;
+	}
+
+
+
+	@OneToOne
+	@JoinColumn(name="accountid")
+	public Account fromAccount;
 
 	public int getTid() {
 		return tid;
@@ -96,22 +121,12 @@ public class Transaction
 
 
 
-	public Account getToAccountId() {
-		return toAccountId;
-	}
-
-
-
-	public void setToAccountId(Account toAccountId) {
-		this.toAccountId = toAccountId;
-	}
-
-
+	
 
 	@Override
 	public String toString() {
 		return "Transaction [tid=" + tid + ", toAccountName=" + toAccountName + ", amount=" + amount + ", tType="
-				+ tType + ", dateandtime=" + dateandtime + ", toAccountId=" + toAccountId + "]";
+				+ tType + ", dateandtime=" + dateandtime + ", toAccountId=" ;
 	}
 
 
