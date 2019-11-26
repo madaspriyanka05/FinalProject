@@ -8,14 +8,6 @@ body {
 }
 
 
-/* Add padding to containers */
-
-
-/* 
-.container {
-    padding: 60px;
-    margin-left: auto;
-} */
 
 .yellow-square {
     background-color: #7bd3f7;
@@ -38,7 +30,7 @@ body {
     margin: auto;
     cursor: pointer;
     position: absolute;
-    top: 190%;
+    top: 390%;
 }
 
 .container {

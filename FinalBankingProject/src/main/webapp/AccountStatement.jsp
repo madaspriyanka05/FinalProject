@@ -1,62 +1,46 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <head>
+	<title>JAN DHAN BANK</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JAN DHAN Banking Services</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <h1 align="center">Account Statement</h1>
-    <p align="right">
-        <a href="">Click here to go back</a>
-    </p>
-    <link rel="stylesheet" href="AccountStatement.css">
- <script>
-        $(document).ready(function() {
-            $("table").hide();
-
-            $("button").click(function() {
-                var empt = document.forms["form1"]["fromdate"].value;
-                var empt1 = document.forms["form1"]["todate"].value;
-                if (empt == "" && empt1 == "") {
-
-                    alert("Please input a Value");
-                    return false;
-                } else {
-                    $("table").show();
-
-                }
-            });
-
-        });
-    </script>
+    <link href="f_style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <div class="foll">
-        <h2> <span>Quick Links</span>
-        </h2>
-        <ul class="sb_menu ">
-            <li><a href="# ">Account Details</a></li>
-            <li><a href="# ">Account Summary</a></li>
-            <li><a href="# ">Fund Transfer</a></li>
-            <li><a href="# ">Account Statement</a></li>
-        </ul>
+<div class="main">
+        <div class="header">
+            <div class="header_resize">
+                <div class="logo">
+                    <marquee><h1><a href="index.html"><span>Jan Dhan</span></a>
+                        <small>Online Banking Services</small></h1></marquee>
+                </div>
+                <div class="menu_nav">
+                    <!-- Navigation -->
 
-    </div>
-    <div>
-        <form name=form1>
-            <div class="wrapper">
-                <label>From</label>
-                <input type="date" name="fromdate">
-                <label>To</label>
-                <input type="date" name="todate"><br/>
+                    <ul>
+                        <li ><a href="u_index.jsp">Home</a></li>
+                        <li><a href="AccountSummary.jsp">Account Summary</a></li>
+                        <li><a href="f_NetBankingLogin.jsp">Funds Transfer</a></li>
+                        <li><a href="ChangeUserPassword.jsp">Change Password</a></li>
+                        <li><a href="LogOut.jsp">LogOut</a></li>
+                	 </ul>
+                </div>
             </div>
-            <div class="wrapper">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
-    </div>
+        </div>
+        
+        <div class="content">
+            <div class="content_resize">
+
+                <div class="mainbar">
+                    <div class="article">
+                       
+                        <div class="clr"></div>
+                        
+                        
+   
     <br/>
     <br/>
     <table border="5" align="center">
@@ -64,7 +48,7 @@
             <th> Account Number </th>
             <th> Holder Name </th>
             <th> Account Type </th>
-            <th> Account Balance </th>
+            <th> Transaction Amount </th>
         </tr>
         <tr>
             <td> 1234 </td>

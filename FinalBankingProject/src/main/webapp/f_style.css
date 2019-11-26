@@ -14,6 +14,14 @@ h1 {
 	letter-spacing:-3px;
 }
 
+h1 reg
+{
+	color:
+	font:bold 46px/1.2em Arial, Helvetica, sans-serif;
+	letter-spacing:-3px;
+	width:300px;
+}
+
 /*Bank's tagline in small size*/
 h1 small {
 	display:block;

@@ -5,7 +5,7 @@
 <head>
     <title>JAN DHAN BANK</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="f_style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -13,15 +13,15 @@
         <div class="header">
             <div class="header_resize">
                 <div class="logo">
-                    <h1><a href="index.html">JAN DHAN <span>BANK</span></a>
-                        <small>Online Banking Services</small></h1>
+                    <marquee><h1><a href="index.html"><span>Jan Dhan</span></a>
+                        <small>Online Banking Services</small></h1></marquee>
                 </div>
                 <div class="menu_nav">
                     <!-- Navigation -->
 
                     <ul>
-                        <li class="w3-bar-item"><a href="Register.jsp">Register</a></li>
-                        <li class="w3-bar-item"><a href="Login.jsp">Login</a></li>
+                        <li><a href="Register.jsp">REGISTER</a></li>
+                        <li><a href="Login.jsp">LOGIN</a></li>
                 	 </ul>
                 </div>
             </div>
@@ -29,18 +29,6 @@
 
         <div class="content">
             <div class="content_resize">
-
-                <div class="sidebar">
-                    <div class="gadget">
-                        <h2 class="star "><span>Quick Links</span></h2>
-                        <div class="clr"></div>
-                        <ul class="sb_menu">
-                            <li><a href="AccountSummary">Account Summary</a></li>
-                            <li><a href="f_Index.jsp">Fund Transfer</a></li>
-                            <li><a href="AccountStatement">Account Statement</a></li>
-                        </ul>
-                    </div>
-                </div>
 
                 <div class="mainbar">
                     <div class="article">

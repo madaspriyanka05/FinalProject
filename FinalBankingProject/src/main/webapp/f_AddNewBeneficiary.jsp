@@ -51,7 +51,7 @@
                         </tr>
                         <tr>
                             <td><h3>BENEFICIARY'S ACCOUNT NUMBER:<h3></h3></td>
-                            <td><input type="password" placeholder="123456789"" name="id" id="beneficiaryAccNumber"></td>
+                            <td><input type="text" placeholder="123456789"" name="bAccountId" id="beneficiaryAccNumber"></td>
                         </tr>
                         <tr><td>&nbsp;</td></tr>
                         <tr>
@@ -79,9 +79,8 @@
             <ul class="sb_menu">
               <li class="quick-link"><a href="#">Account Details</a></li>
               <li class="quick-link"><a href="#">Fund Transfer</a></li>
-              <li class="quick-link"><a href="#">Other Payments</a></li>
-              <li class="quick-link"><a href="#">Last 10 Transactions</a></li>
-              <li class="quick-link"><a href="f_NetBankingLogin.jsp">Login</a></li>
+              <li class="quick-link"><a href="#">View Beneficiaries</a></li>
+              <li class="quick-link"><a href="Login.jsp">Logout</a></li>
             </ul>
         </div>
       </div>

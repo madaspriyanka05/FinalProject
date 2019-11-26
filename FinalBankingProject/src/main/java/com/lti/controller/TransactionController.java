@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.lti.Interface.CustomerServiceInterface;
 import com.lti.Interface.TransactionServiceInterface;
 import com.lti.entity.Account;
 
@@ -32,14 +33,14 @@ public class TransactionController
 			@RequestParam(name="fromAccountId") int accid,
 			@RequestParam(name="toAccountId") int baccid,
 			@RequestParam(name="amount") double amount,
-			@RequestParam(name="ttype") String type,
+			@RequestParam(name="tType") String type,
 			Map m)
 	{	
 		try
 		{
 			transactionServiceInterface.transfer(accid, baccid, amount, type);
 			//m.put("Transaction Completed Successfully");
-			return "f_MiniStatement.jsp";
+			return "f_TransactionPassword.jsp";
 		}
 		
 		catch(Exception e) {
@@ -47,12 +48,4 @@ public class TransactionController
 			return "u_index.jsp";
 		}
 	}
-
-	/*@RequestMapping(path="f_TransactionPassword.lti",method=RequestMethod.POST)
-	private String neftTransfer(Transaction data, Map m, @RequestParam(name="username") int accid,@RequestParam(name="ToaccountId") int baccid ,@RequestParam(name="amount") double amount, HttpServletRequest request) 
-	{
-		
-	}
-	}*/
-	
-	}
+}

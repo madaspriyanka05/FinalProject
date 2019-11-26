@@ -62,6 +62,18 @@ public class CustomerRepository implements CustomerInterface {
 		return l1;
 	}
 	
+	public NetBankAccount readTransactionPassword(String transcationPassword) 
+	{
+		
+		String qu = "select a from NetBankAccount as where a.transcationPassword=:transcationPassword";
+		Query q1=entityManager.createQuery(qu);
+		q1.setParameter("transcationPassword",transcationPassword);
+		List list=q1.getResultList();
+				
+		NetBankAccount l1=(NetBankAccount)q1.getSingleResult();
+		return l1;
+	}
+	
 	public void updateNewCustomer(Customer cust) 
 	{
 		entityManager.merge(cust);

@@ -23,4 +23,6 @@ public interface CustomerInterface
 	public Customer readLogin(String e,String p);
 	
 	public NetBankAccount readNetLogin(String username, String password) ;
+	
+	public NetBankAccount readTransactionPassword(String transcationPassword);
 }

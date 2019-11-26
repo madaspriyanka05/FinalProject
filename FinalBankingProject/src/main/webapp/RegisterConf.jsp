@@ -5,57 +5,35 @@
 <head>
     <title>JAN DHAN BANK</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link href="index.css" rel="stylesheet" type="text/css" />
     <link href="f_style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-
-<div class="main">
+    <div class="main">
         <div class="header">
             <div class="header_resize">
                 <div class="logo">
                     <marquee><h1><a href="index.html"><span>Jan Dhan</span></a>
                         <small>Online Banking Services</small></h1></marquee>
                 </div>
-                <div class="menu_nav">
-                    <!-- Navigation -->
-
-                    <ul>
-                        <li ><a href="AccountSummary.jsp">My Accounts</a></li>
-                        <li><a href="AccountStatement.jsp">Account Statement</a></li>
-                        <li><a href="f_Index.jsp">Funds Transfer</a></li>
-                        <li><a href="ChangeUserPassword.jsp">Change Password</a></li>
-                        <li><a href="LogOut.jsp">LogOut</a></li>
-                	 </ul>
-                </div>
             </div>
         </div>
 
-
-		<div class="content">
-            <div class="content_resize">
-
-                <div class="mainbar">
-                    
-           
-
         <div class="content">
             <div class="content_resize">
-            <center>
-					<h1 style="color:blue;">JAN DHAN BANK</h1>
-					<h1 style="color:green;">WELCOMES YOU !!!</h1>
-					<h2>WE ARE ALWAYS HERE TO HELP YOU</h2>
-					</center>
-                	
-
+            <br><br> 
+					<h1 style="color:blue;">YOU ARE SUCCESSFULLY REGISTERED !!</h1>
                 <div class="clr"></div>
+                <br><br>
+                <center>
+                <h2><a href="index.jsp">Please click here to Login</a></h2>
+                </center>
             </div>
         </div>
 
         <div class="footer">
             <div class="footer_resize">
-                <p class="lf">Copyright &copy; <a href="f_Index.jsp">Net Banking</a>. All Rights Reserved</p>
+                <p class="lf">Copyright &copy; <a href="#">Net Banking</a>. All Rights Reserved</p>
                 <p class="rf">Design by <a target="_blank" href="http://www.freewebsitetemplatez.com/">FreeWebsiteTemplatez</a></p>
                 <div class="clr"></div>
             </div>

@@ -23,6 +23,7 @@ public class Beneficiary
 	
 	private String bName;
 	
+	private int bAccountId;
 	
 	/*
 	@ManyToOne
@@ -30,19 +31,13 @@ public class Beneficiary
 	public Account baccount;
 	*/
 	
+	/*@OneToOne
+	@JoinColumn(name="bAccountId")
+	public Account benAccountId;*/
+	
 	@OneToOne
-	@JoinColumn(name="accountId",nullable=false)
-	public Account account;
-
-
-	public Beneficiary(int id, String bName, Account baccount, Account account) {
-		super();
-		this.id = id;
-		this.bName = bName;
-		//this.baccount = baccount;
-		this.account = account;
-	}
-
+	@JoinColumn(name="accountId")
+	public Account custAccountId;
 
 	public int getId() {
 		return id;
@@ -63,38 +58,26 @@ public class Beneficiary
 		this.bName = bName;
 	}
 
-/*
-	public Account getBaccount() {
-		return baccount;
+
+	public int getbAccountId() {
+		return bAccountId;
 	}
 
 
-	public void setBaccount(Account baccount) {
-		this.baccount = baccount;
-	}
-*/
-
-	public Account getAccount() {
-		return account;
+	public void setbAccountId(int bAccountId) {
+		this.bAccountId = bAccountId;
 	}
 
 
-	public void setAccount(Account account) {
-		this.account = account;
+	public Account getCustAccountId() {
+		return custAccountId;
 	}
 
-/*
-	@Override
-	public String toString() {
-		return "Beneficiary [id=" + id + ", bName=" + bName + ", baccount=" + baccount + ", account=" + account + "]";
+
+	public void setCustAccountId(Account custAccountId) {
+		this.custAccountId = custAccountId;
 	}
-
-*/
-
-	
 
 	
 	
-
-
 }

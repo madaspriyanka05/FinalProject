@@ -31,7 +31,7 @@ public class LoginController
 
 		model.put("user", login);
 		System.out.println("okkk");
-		return "u_index.jsp";
+		return "LoginConf.jsp";
 		}
 		catch(Exception e)
 		{

@@ -27,17 +27,6 @@ public class CustomerService  implements CustomerServiceInterface
 	{
 		Customer a = customerInterface.readLogin(email, password);
 		return a;
-		
-	  /*int result=customerInterface.readLogin(email, password);
-	  
-	  if(result==1)
-	  {
-		  return  true;
-	  }
-	  else
-	  {
-		  return false;
-	  }*/
 	  
 	}
 	
@@ -47,5 +36,13 @@ public class CustomerService  implements CustomerServiceInterface
 		NetBankAccount a = customerInterface.readNetLogin(username, password);
 		return a;
 	}
+	
+	@Transactional
+	public NetBankAccount checkTransactionPassword(String transcationPassword) 
+	{
+		NetBankAccount a = customerInterface.readTransactionPassword(transcationPassword);
+		return a;
+	}
+	
 }
 

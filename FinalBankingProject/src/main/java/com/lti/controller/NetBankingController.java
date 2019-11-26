@@ -21,11 +21,13 @@ public class NetBankingController
 	@RequestMapping(path = "f_AddNetBankingAcc.lti", method = RequestMethod.POST)
 	public String register(NetBankAccount netbank, ModelMap model, HttpSession session)
 	{
-		try{
+		try
+		{
 		Account netDetails= (Account) model.get("user");
 		netbank.setNetbankingAccountId(netDetails);
 		
 		netBankingServiceInterface.registerAdd(netbank);
+		
 		model.put("user", netbank);
 		return "f_paymentMode.jsp";
 		}

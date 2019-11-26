@@ -3,11 +3,58 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>sRishTi Banking Services</title>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <link href="f_style.css" rel="stylesheet" type="text/css" />
+	<title>Jan Dhan Banking Services</title>
+  	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  	<link href="f_style.css" rel="stylesheet" type="text/css" />
+  
+  <script>
+
+// Set timeout variables.
+var timoutWarning = 3000; // Display warning in 4.5 Mins.
+var timoutNow = 2500; // Timeout in 5 mins.
+var logoutUrl = 'LogOut.jsp'; // URL to logout page.
+
+var warningTimer;
+var timeoutTimer;
+
+// Start timers.
+function StartTimers() {
+    warningTimer = setTimeout("IdleWarning()", timoutWarning);
+    timeoutTimer = setTimeout("IdleTimeout()", timoutNow);
+}
+
+// Reset timers.
+function ResetTimers() {
+    clearTimeout(warningTimer);
+    clearTimeout(timeoutTimer);
+    StartTimers();
+    $("#timeout").dialog('close');
+}
+
+// Show idle timeout warning dialog.
+function IdleWarning() {
+    $("#timeout").dialog({
+        modal: true
+    });
+}
+
+// Logout the user.
+function IdleTimeout() {
+    window.location = logoutUrl;
+}
+ 
+
+</script>
+  
+  
 </head>
 <body>
+
+
+
+
+
+
 	<div class="main">
   <div class="header">
     <div class="header_resize">
@@ -85,5 +132,13 @@
     </div>
   </div>
 </div>
+
+ <div id="timeout">
+            <h1>Session About To Timeout</h1>
+            <p>You will be automatically logged out after 5 minutes.<br />
+            To remain logged in move your mouse over this window.
+        </div>
+
+
 </body>
 </html>

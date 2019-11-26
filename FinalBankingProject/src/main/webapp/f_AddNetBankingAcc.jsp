@@ -60,7 +60,7 @@
                         <tr>
                           <td><h3>SECURITY QUESTION:<h3></h3></td>
                           <td>
-                            <select name="securityQues">
+                            <select name="toaccountid">
                               <option value="What is your favorite color ?">What is your favorite color ?</option>
                               <option value="What is your pet name ?">What is your pet name ?</option>
                               <option value="Which is your birthplace ?">Which is your birthplace ?</option>
@@ -96,10 +96,9 @@
             <h2><span>Quick Links</span></h2>
             <div class="clr"></div>
             <ul class="sb_menu">
-              <li class="quick-link"><a href="#">Account Details</a></li>
-              <li class="quick-link"><a href="#">Fund Transfer</a></li>
-              <li class="quick-link"><a href="#">Other Payments</a></li>
-              <li class="quick-link"><a href="#">Last 10 Transactions</a></li>
+              <li class="quick-link"><a href="AccountSummary.jsp">Account Summary</a></li>
+              <li class="quick-link"><a href="f_Index.jsp">Fund Transfer</a></li>
+             
               <li class="quick-link"><a href="f_NetBankingLogin.jsp">Login</a></li>
             </ul>
         </div>

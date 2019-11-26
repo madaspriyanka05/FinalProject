@@ -17,10 +17,7 @@
       </div>
       <div class="menu_nav">
         <ul>
-          <li><a href="index.html">My Accounts</a></li>
-          <li><a href="">My Profile</a></li>
-          <li class="active"><a href="PaymentMode.html">Payments/Transfers</a></li>
-          <li><a href="">Enquiries</a></li>
+         <li class="active"><a href="PaymentMode.html">Payments/Transfers</a></li>
         </ul>
         <div class="searchform">
           <form id="formsearch" name="formsearch" method="post" action="#">
@@ -47,7 +44,7 @@
                         <tr><td>&nbsp;</td></tr>
                         <tr>
                             <td><h3>ENTER YOUR TRANSACTION PASSWORD:<h3></h3></td>
-                            <td><input type="text" placeholder="********" name="username" id="beneficiaryName"></td>
+                            <td><input type="password" placeholder="********" name="transcationPassword"></td>
                         </tr>
                         <tr><td>&nbsp;</td></tr>
                         <tr>
@@ -76,9 +73,10 @@
             <h2><span>Quick Links</span></h2>
             <div class="clr"></div>
             <ul class="sb_menu">
-              <li class="quick-link"><a href="#">Account Details</a></li>
-              <li class="quick-link"><a href="#">Fund Transfer</a></li>
-              <li class="quick-link"><a href="#">Logout</a></li>
+                 <li><a href="AccountSummary.jsp ">Account Summary</a></li>
+            <li><a href="f_Index.jsp">Fund Transfer</a></li>
+            <li><a href="AccountStatement.jsp ">Account Statement</a></li>
+              <li class="quick-link"><a href="LogOut.jsp">Logout</a></li>
             </ul>
         </div>
       </div>

@@ -16,12 +16,12 @@ public class CustomerController {
 	@Autowired
 	private CustomerServiceInterface customerServiceInterface;
 	
-	@RequestMapping(path = "register.lti", method = RequestMethod.POST)
+	@RequestMapping(path = "Register.lti", method = RequestMethod.POST)
 	public String register(Customer cust)
 	{
 		customerServiceInterface.register(cust);
 		//session.setAttribute("reg_id", cust.getId());
-		return "index.jsp";
+		return "RegisterConf.jsp";
 	}
 	
 }

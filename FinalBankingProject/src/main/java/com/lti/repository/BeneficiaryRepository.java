@@ -9,10 +9,11 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.lti.Interface.BeneficiaryInterface;
 import com.lti.entity.Beneficiary;
 
 @Repository
-public class BeneficiaryRepository
+public class BeneficiaryRepository implements BeneficiaryInterface
 {
 
 	@PersistenceContext
@@ -21,9 +22,10 @@ public class BeneficiaryRepository
 	@Transactional
 	public void addNewBeneficiary(Beneficiary beneficiaryobj) 
 	{
-		entityManager.persist(beneficiaryobj);
+		entityManager.merge(beneficiaryobj);
 	}
 
+	@Transactional
 	public void removeBeneficiary(Beneficiary beneficiaryobj) 
 	{
 		entityManager.remove(beneficiaryobj);

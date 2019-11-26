@@ -5,6 +5,17 @@
 }
 
 
+.article {
+
+  height: 180px;
+  padding: 10px;
+  background-color: cyan;
+
+
+}
+
+
+
 /*Bank's name as heading*/
 
 h1 {

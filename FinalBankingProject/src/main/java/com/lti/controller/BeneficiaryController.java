@@ -23,9 +23,11 @@ public class BeneficiaryController
 	@RequestMapping(path = "f_AddNewBeneficiary.lti", method = RequestMethod.POST)
 	public String register(Beneficiary ben, ModelMap model, HttpSession session)
 	{
-		try{
+		try
+		{
 		Account benDetails= (Account) model.get("user");
-		ben.setAccount(benDetails);
+		ben.setCustAccountId(benDetails);
+		
 		beneficiaryServiceInterface.registerAdd(ben);
 		
 		model.put("user", ben);

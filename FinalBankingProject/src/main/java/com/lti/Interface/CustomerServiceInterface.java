@@ -10,5 +10,7 @@ public interface CustomerServiceInterface
 	
 	public Customer checkLogin(String username, String password);
 	public NetBankAccount checkNetLogin(String username, String password);
+
+	public NetBankAccount checkTransactionPassword(String transactionPass);
 	
 }

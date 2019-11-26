@@ -22,14 +22,7 @@
           <li class="active"><a href="PaymentMode.html">Payments/Transfers</a></li>
           <li><a href="">Enquiries</a></li>
         </ul>
-        <div class="searchform">
-          <form id="formsearch" name="formsearch" method="post" action="#">
-            <span>
-            <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" placeholder="Search our site:" type="text" />
-            </span>
-            <input name="button_search" src="f_images/search_btn.gif" class="button_search" type="image" />
-          </form>
-        </div>
+       
       </div>
     </div>
   </div>
