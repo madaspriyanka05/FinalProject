@@ -24,24 +24,10 @@ public class NetBankAccount
 	private String securityQues;
 	private String securityAns;
 	
-	
 	@OneToOne
 	@JoinColumn(name="accountId")
 	private Account netbankingAccountId;
 	
-	
-	
-	public NetBankAccount(int id, String username, String netPassword, String transcationPassword, String securityQues,
-			String securityAns, Account netbankingAccountId) {
-		super();
-		this.id = id;
-		this.username = username;
-		this.netPassword = netPassword;
-		this.transcationPassword = transcationPassword;
-		this.securityQues = securityQues;
-		this.securityAns = securityAns;
-		this.netbankingAccountId = netbankingAccountId;
-	}
 	public int getId() {
 		return id;
 	}

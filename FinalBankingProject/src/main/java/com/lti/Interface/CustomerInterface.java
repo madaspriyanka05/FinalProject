@@ -10,6 +10,7 @@ import java.util.List;
 
 
 import com.lti.entity.Customer;
+import com.lti.entity.NetBankAccount;
 
 public interface CustomerInterface
 {
@@ -19,5 +20,7 @@ public interface CustomerInterface
 	public void deleteNewCustomer(Customer customer);
 	
 	public List<Customer> getCustomersList();
-	public int readLogin(String e,String p);
+	public Customer readLogin(String e,String p);
+	
+	public NetBankAccount readNetLogin(String username, String password) ;
 }

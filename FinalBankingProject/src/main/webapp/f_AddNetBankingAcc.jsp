@@ -51,11 +51,11 @@
                         </tr>
                         <tr>
                             <td><h3>NET-BANKING PASSWORD:<h3></h3></td>
-                            <td><input type="password" placeholder="="********"" name="netPassword" id="beneficiaryAccNumber"></td>
+                            <td><input type="password" placeholder="********"" name="netPassword" id="beneficiaryAccNumber"></td>
                         </tr>
                         <tr>
                             <td><h3>TRANSACTION PASSWORD:<h3></h3></td>
-                            <td><input type="password" placeholder="="********"" name="TRANSCATIONPASSWORD" id="beneficiaryReAccNumber"></td>
+                            <td><input type="password" placeholder="********"" name="transcationPassword" id="beneficiaryReAccNumber"></td>
                         </tr>
                         <tr>
                           <td><h3>SECURITY QUESTION:<h3></h3></td>
@@ -72,11 +72,6 @@
                         <td><input type="text" placeholder="Minions" name="securityAns" id="beneficiaryName"></td>
                       </tr>
                       
-                      <tr>
-                        <td><h3>Acc:<h3></h3></td>
-                        <td><input type="text" placeholder="Minions" name="accountId" id="beneficiaryName"></td>
-                      </tr>
-                      
                         <tr><td>&nbsp;</td></tr>
                         <tr>
                             <th colspan="2"><input type="submit" value="Save As Beneficiary"></th>
@@ -90,7 +85,7 @@
                 <br><br><br>
                 <img src="images/img2.jpg" width="30" height="20" alt="" class="fl" />
                 <p>
-                    The Payments and Transfers tab enables you to make online Transactionsusig funds in your Accounts.
+                    The Payments and Transfers tab enables you to make online Transactions using funds in your Accounts.
                     You can transfer funds to any Accounts.
                 </p>
             </div>

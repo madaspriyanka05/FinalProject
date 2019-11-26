@@ -36,15 +36,6 @@ public class Account
 	private Customer customer;
 
 
-	public Account(int accountId, double balance, LocalDate openDate, String status, Customer customer) {
-		super();
-		this.accountId = accountId;
-		this.balance = balance;
-		this.openDate = openDate;
-		this.status = status;
-		this.customer = customer;
-	}
-
 
 	public int getAccountId() {
 		return accountId;

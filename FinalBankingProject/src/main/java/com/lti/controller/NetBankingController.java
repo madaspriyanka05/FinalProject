@@ -1,30 +1,41 @@
 package com.lti.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.lti.Interface.NetBankingServiceInterface;
+import com.lti.entity.Account;
 import com.lti.entity.NetBankAccount;
-import com.lti.service.NetBankingService;
 
 @Controller
-
 public class NetBankingController 
 {
 	@Autowired
 	private NetBankingServiceInterface netBankingServiceInterface;
 	
 	@RequestMapping(path = "f_AddNetBankingAcc.lti", method = RequestMethod.POST)
-	public String register(NetBankAccount netbank)
+	public String register(NetBankAccount netbank, ModelMap model, HttpSession session)
 	{
+		try{
+		Account netDetails= (Account) model.get("user");
+		netbank.setNetbankingAccountId(netDetails);
+		
 		netBankingServiceInterface.registerAdd(netbank);
+		model.put("user", netbank);
 		return "f_paymentMode.jsp";
+		}
+		catch(Exception e)
+		{
+			return "f_AddNetBankingAcc.jsp";
+		}
 	}
 
+	/*
 	@RequestMapping(path = "f_NetBankingLogin.lti", method = RequestMethod.POST)
 	public String login(@RequestParam("username") String username, @RequestParam("password") String password)
 	{
@@ -59,8 +70,8 @@ public class NetBankingController
 		else
 		{
 			return null;
-		}*/
+		}
 
-	}
+	}*/
 	
 }

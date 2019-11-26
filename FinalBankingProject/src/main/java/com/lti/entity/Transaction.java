@@ -1,6 +1,8 @@
 package com.lti.entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -13,6 +15,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name="Transaction")
@@ -27,11 +31,17 @@ public class Transaction
 	private String toAccountName;
 	private double amount;
 	private String tType;
+	
+	@DateTimeFormat
 	private LocalDateTime dateandtime;
 	
 	@OneToOne
 	@JoinColumn(name="toaccountid")
 	public Account toAccount;
+	
+	@OneToOne
+	@JoinColumn(name="accountid")
+	public Account fromAccount;
 
 	public Account getToAccount() {
 		return toAccount;
@@ -57,9 +67,7 @@ public class Transaction
 
 
 
-	@OneToOne
-	@JoinColumn(name="accountid")
-	public Account fromAccount;
+	
 
 	public int getTid() {
 		return tid;
@@ -121,17 +129,5 @@ public class Transaction
 
 
 
-	
-
-	@Override
-	public String toString() {
-		return "Transaction [tid=" + tid + ", toAccountName=" + toAccountName + ", amount=" + amount + ", tType="
-				+ tType + ", dateandtime=" + dateandtime + ", toAccountId=" ;
-	}
-
-
-
-
-	
 	
 }

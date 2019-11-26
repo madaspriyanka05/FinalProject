@@ -39,7 +39,7 @@
       <div class="mainbar">
         <div class="article">
             <br>
-            <form action="f_.lti" method="POST">
+            <form action="f_TransactionPassword.lti" method="POST">
                 <table id="funds">
                         <tr>
                             <th><h2>Finishing Your Transaction...</h2></th>

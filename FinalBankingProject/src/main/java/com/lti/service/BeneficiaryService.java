@@ -6,24 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.lti.Interface.BeneficiaryInterface;
+import com.lti.Interface.BeneficiaryServiceInterface;
 import com.lti.entity.Beneficiary;
 
 @Service
-public class BeneficiaryService implements BeneficiaryInterface
+public class BeneficiaryService implements BeneficiaryServiceInterface
 {
-
-	public void addNewBeneficiary(Beneficiary beneficiaryobj) {
-
-		
-	}
-
-	public List<Beneficiary> getBeneficiaries() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public void removeBeneficiary(Beneficiary beneficiaryobj) {
-		// TODO Auto-generated method stub
-		
+	@Autowired
+	private BeneficiaryInterface beneficiaryInterface;
+	
+	public void registerAdd(Beneficiary ben) 
+	{
+		beneficiaryInterface.addNewBeneficiary(ben);
 	}
 }

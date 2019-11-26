@@ -7,10 +7,9 @@ import org.springframework.transaction.annotation.Transactional;
 import com.lti.Interface.CustomerInterface;
 import com.lti.Interface.CustomerServiceInterface;
 import com.lti.entity.Customer;
+import com.lti.entity.NetBankAccount;
 
-import com.lti.repository.CustomerRepository;
-
-@Service
+@Service("loginService")
 public class CustomerService  implements CustomerServiceInterface 
 {
 
@@ -23,9 +22,13 @@ public class CustomerService  implements CustomerServiceInterface
 		customerInterface.addNewCustomer(cust);
 	}
 	
-	public boolean checkLogin(String email, String password) 
+	@Transactional
+	public Customer checkLogin(String email, String password) 
 	{
-	  int result=customerInterface.readLogin(email, password);
+		Customer a = customerInterface.readLogin(email, password);
+		return a;
+		
+	  /*int result=customerInterface.readLogin(email, password);
 	  
 	  if(result==1)
 	  {
@@ -34,8 +37,15 @@ public class CustomerService  implements CustomerServiceInterface
 	  else
 	  {
 		  return false;
-	  }
+	  }*/
 	  
+	}
+	
+	@Transactional
+	public NetBankAccount checkNetLogin(String username, String password) 
+	{
+		NetBankAccount a = customerInterface.readNetLogin(username, password);
+		return a;
 	}
 }
 

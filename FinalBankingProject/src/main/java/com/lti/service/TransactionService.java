@@ -5,66 +5,47 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.CannotCreateTransactionException;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.lti.Interface.GenericRepositoryInterface;
 import com.lti.Interface.TransactionServiceInterface;
 import com.lti.entity.Account;
-import com.lti.entity.Beneficiary;
 import com.lti.entity.NetBankAccount;
 import com.lti.entity.Transaction;
 
 @Service
-
 public class TransactionService  implements TransactionServiceInterface
 {
-	private static final double MINIMUM_BALANCE = 10000;
-	private double charge = 0;
 	
 	@Autowired
 	private GenericRepositoryInterface genericRepositoryInterface;
 
-	
-	Transaction t1 = new Transaction();
-	
-	
-	public void  transfer(int accid, int baccid ,double amount) 
+	public void  transfer(int accid, int baccid, double amount, String type) 
 	{
 		
 		Account acc1 = (Account) genericRepositoryInterface.fetchById(Account.class, accid); //fromaccountid
 		Account acc2 = (Account) genericRepositoryInterface.fetchById(Account.class, baccid);//toaccountid
-		double balforacc1=acc1.getBalance();
-		//double balforacc2=acc2.getBalance();
 		
-		
-		if(amount>=acc1.getBalance())
+		if(amount<=acc1.getBalance())
 		{
 			acc1.setBalance(acc1.getBalance()-amount);//withdraw from acc1
-			
 			acc2.setBalance(acc2.getBalance()+amount);//Transfer to account2
-			
-			
-			t1.settType("Withdraw");
+
+			Transaction t1 = new Transaction();
+			t1.settType(type);
 			t1.setAmount(amount);
-			
 			t1.setFromAccount(acc1);
 			t1.setToAccount(acc2);
 			t1.setDateandtime(LocalDateTime.now());
-			
-			
-//			genericRepositoryInterface.upsert(acc1);//updating the remaining balance
-//			genericRepositoryInterface.upsert(acc2);//updating the transaction balance
+
 			genericRepositoryInterface.upsert(t1);
-		    System.out.println("Transfered Amount to accid 2");
-			
 		}
-//		System.out.println("Insufficient Balance");
-		
+		else {
+			//throw some exception
+		}
 	}
 
 	public List<Transaction> transferAmount(Transaction txdata, NetBankAccount netBankAccountId, Account accountId) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 

@@ -50,15 +50,15 @@
                             </tr>-->
                             <tr>
                                 <td><h3>From Account Number:<h3></h3></td>
-                                <td><input type="text" name="fromaccountId" placeholder="123456789" id="RTGSfromAccNumber"></td>
+                                <td><input type="text" name="fromAccountId" placeholder="123456789" id="RTGSfromAccNumber"></td>
                             </tr> 
                             <tr>
                                 <td><h3>To Account Name:<h3></h3></td>
-                                <td><input type="text" name="toAccountname" placeholder="Minions" id="RTGStoAccName"></td>
+                                <td><input type="text" name="toAccountName" placeholder="Minions" id="RTGStoAccName"></td>
                             </tr>
                             <tr>
                                     <td><h3>To Account Number:<h3></h3></td>
-                                    <td><input type="text" name="ToaccountId" placeholder="123456789" id="RTGStoAccNumber"></td>
+                                    <td><input type="text" name="toAccountId" placeholder="123456789" id="RTGStoAccNumber"></td>
                                 </tr>
                              <tr>
                                 <td><h3>Type of Payment:<h3></h3></td>
@@ -68,10 +68,10 @@
                                 <td><h3>Amount:<h3></h3></td>
                                 <td><input type="text" name="amount" placeholder="100" id="RTGSamount"></td>
                             </tr>
-                           <!--  <tr>
+                             <tr>
                                 <td><h3>Date:<h3></h3></td>
-                                <td><input type="text" name="dateandtime" placeholder="24-11-2019" id="RTGSamount"></td>
-                            </tr> -->
+                                <td><input type="date" name="dateandtime" placeholder="24-11-2019" id="RTGSamount"></td>
+                            </tr>
                             <!-- <tr>
                                 <td><h3>Remark:<h3></h3></td>
                                 <td><input type="text" name="" placeholder="Remark" id="RTGSremark"></td>

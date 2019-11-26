@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.lti.Interface.TransactionServiceInterface;
 import com.lti.entity.Account;
-import com.lti.entity.Beneficiary;
+
 import com.lti.entity.NetBankAccount;
 import com.lti.entity.Transaction;
 
@@ -28,21 +28,31 @@ public class TransactionController
 	
 
 	@RequestMapping(path="f_NEFT.lti",method=RequestMethod.POST)
-	private String neftTransfer(Transaction data, Map m, @RequestParam(name="fromaccountId") int accid,@RequestParam(name="ToaccountId") int baccid ,@RequestParam(name="amount") double amount, HttpServletRequest request) 
+	private String neftTransfer(
+			@RequestParam(name="fromAccountId") int accid,
+			@RequestParam(name="toAccountId") int baccid,
+			@RequestParam(name="amount") double amount,
+			@RequestParam(name="ttype") String type,
+			Map m)
 	{	
 		try
 		{
-			//Account fromAccountId = (Account)request.getSession().getAttribute("fromaccountId");
-			//Account toAccountId = (Account)request.getSession().getAttribute("ToaccountId");
-			transactionServiceInterface.transfer(accid, baccid, amount);
+			transactionServiceInterface.transfer(accid, baccid, amount, type);
 			//m.put("Transaction Completed Successfully");
 			return "f_MiniStatement.jsp";
 		}
 		
 		catch(Exception e) {
 			m.put("error", "Transaction unsuccessful");
-			return "Login.jsp";
+			return "u_index.jsp";
 		}
 	}
 
+	/*@RequestMapping(path="f_TransactionPassword.lti",method=RequestMethod.POST)
+	private String neftTransfer(Transaction data, Map m, @RequestParam(name="username") int accid,@RequestParam(name="ToaccountId") int baccid ,@RequestParam(name="amount") double amount, HttpServletRequest request) 
+	{
+		
+	}
+	}*/
+	
 	}

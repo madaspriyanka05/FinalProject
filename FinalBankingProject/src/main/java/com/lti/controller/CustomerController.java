@@ -20,23 +20,8 @@ public class CustomerController {
 	public String register(Customer cust)
 	{
 		customerServiceInterface.register(cust);
-		
+		//session.setAttribute("reg_id", cust.getId());
 		return "index.jsp";
-	}
-
-	@RequestMapping(path = "login.lti", method = RequestMethod.POST)
-	public String login(@RequestParam("emailId") String username, @RequestParam("password") String password) {
-
-		boolean i= customerServiceInterface.checkLogin(username,password);
-		if(i)
-		{
-			return "index.jsp";
-		}
-		else
-		{
-			return null;
-		}
-		
 	}
 	
 }
