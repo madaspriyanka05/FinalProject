@@ -81,9 +81,5 @@
         <p class="submit"><input type="submit" name="commit" value="Login"></p>
     </form>
 </div>
-
-<div class="login-help">
-    <p>Forgot your password? <a href="changePassword.jsp">Click here to reset it</a>.</p>
-</div>
 </body>
 </html>

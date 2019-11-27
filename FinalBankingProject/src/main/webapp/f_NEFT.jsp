@@ -46,7 +46,7 @@
                             <tr><td>&nbsp;</td></tr>
                             <tr>
                                 <td><h3>From Account Name:<h3></h3></td>
-                                <td><input type="text" name="fromAccountName" id="fromAccName" value="${ sessionScope.user.customeraccount.accountId }" readonly></td>
+                                <td><input type="text" name="fromAccountName" size="35" id="fromAccName" value="${ sessionScope.user.firstname }" readonly></td>
                             </tr>
                             <tr>
                                 <td><h3>From Account Number:<h3></h3></td>

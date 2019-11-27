@@ -40,7 +40,7 @@ public class TransactionController
 		{
 			transactionServiceInterface.transfer(accid, baccid, amount, type);
 			session.setAttribute("accountId", transaction.getFromAccount());
-			return "f_TransactionPassword.jsp";
+			return "AccountStatement.jsp";
 		}
 		
 		catch(Exception e) {
