@@ -16,9 +16,13 @@
       </div>
       <div class="menu_nav">
         <ul>
-          <li><a href="AccountSummary.jsp">My Accounts</a></li>
-          <li class="active"><a href="f_paymentMode.jsp">Payments/Transfers</a></li>
-          <li><a href="Login.jsp">Logout from Jan Dhan</a></li>
+        
+        <li ><a href="u_index.jsp">Home</a></li>
+                        <li><a href="AccountSummary.jsp">My Accounts</a></li>
+                        <li><a href="AccountStatement.jsp">Account Statement</a></li>
+                        <li class="active"><a href="f_paymentMode.jsp">Funds Transfer</a></li>
+                        <li><a href="ChangeUserPassword.jsp">Change Password</a></li>
+                        <li><a href="Login.jsp">LogOut</a></li>
         </ul>
         
       </div>
@@ -33,13 +37,14 @@
             <form action="f_AddNewBeneficiary.lti" method="POST">
                 <table id="funds">
                         <tr>
-                            <th><h2>ADD NEW BENEFICIARY</h2></th>
+                            <th><h2>SERVER DOWN !!!</h2></th>
                         </tr>
                         <tr><td>&nbsp;</td></tr>
                         <tr>
-                            <td><h3>BENEFICIARY'S NAME:<h3></h3></td>
-                            <td><input type="text" placeholder="Minions" name="bName" id="beneficiaryName"></td>
+                            <td><h3>We are very sorry for your inconvenience.<h3></h3></td>
+                            
                         </tr>
+                        <!-- 
                         <tr>
                             <td><h3>BENEFICIARY'S ACCOUNT NUMBER:<h3></h3></td>
                             <td><input type="text" placeholder="123456789"" name="bAccountId" id="beneficiaryAccNumber"></td>
@@ -47,7 +52,7 @@
                         <tr><td>&nbsp;</td></tr>
                         <tr>
                             <th colspan="2"><input type="submit" value="Save As Beneficiary"></th>
-                        </tr>
+                        </tr> -->
                     </table>
                     </form>
               </div> 

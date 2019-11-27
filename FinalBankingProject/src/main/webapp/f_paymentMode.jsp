@@ -17,9 +17,12 @@
       </div>
       <div class="menu_nav">
         <ul>
-          <li><a href="AccountSummary.jsp">My Accounts</a></li>
-          <li class="active"><a href="PaymentMode.html">Payments/Transfers</a></li>
-          <li><a href="Login.jsp">Logout from Jan Dhan</a></li>
+          <li><a href="u_index.jsp">Home</a></li>
+                        <li ><a href="AccountSummary.jsp">My Accounts</a></li>
+                        <li><a href="AccountStatement.jsp">Account Statement</a></li>
+                        <li class="active"><a href="f_paymentMode.jsp">Funds Transfer</a></li>
+                        <li><a href="ChangeUserPassword.jsp">Change Password</a></li>
+                        <li><a href="Login.jsp">LogOut</a></li>
         </ul>
         
       </div>
@@ -32,37 +35,32 @@
         <div class="article">
           <br>
             <table id="funds" cellpadding="0" style="width:100%">
-                <tr>
-                    <th><h2>Funds Transfer:</h2></th>
-                </tr> 
-                <tr>
-                    <td><h3><a href="f_AddNewBeneficiary.jsp">Add & Manage Beneficiary</a></h3></td>
-                </tr>
+                
                 <tr><td>&nbsp;</td></tr>
                 <tr>
                     <th><h2>Within Jan Dhan</h2></th>
                 </tr>
                 <tr>
-                    <td><h3><a href="">Accounts of Others - Within sRishTi</a></h3></td>
+                    <td><h3><a href="f_NEFT.jsp">Accounts of Others - Within Jan Dhan</a></h3></td>
                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                    <td><h3><a href="">Funds Transfer (Own sRishTi A/c)</a></h3></td>
+                    <td><h3><a href="f_NEFT.jsp">Funds Transfer (Own Jan Dhan A/c)</a></h3></td>
                 </tr>
                 <tr><td>&nbsp;</td></tr>
                 <tr>
-                    <th><h2>Outside sRishTi</h2></th>
+                    <th><h2>Outside Jan Dhan</h2></th>
                 </tr>
                 <tr>
-                    <td><h3><a href="">Other Bank Transfer</a></h3></td>
+                    <td><h3><a href="f_paymentmode.jsp">Other Bank Transfer</a></h3></td>
                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                    <td><h3><a href="f_IMPS.jsp">IMPS Funds Transfer</a></h3></td>
+                    <td><h3><a href="f_NEFT.jsp">IMPS Funds Transfer</a></h3></td>
                 </tr>
                 <tr>
                     <td><h3><a href="f_NEFT.jsp">NEFT Funds Transfer</a></h3></td>
                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                    <td><h3><a href="f_RTGS.jsp">RTGS Funds Transfer</a></h3></td>
+                    <td><h3><a href="f_NEFT.jsp">RTGS Funds Transfer</a></h3></td>
                 </tr>
             </table>
         </div>
@@ -84,7 +82,7 @@
             <ul class="sb_menu">
               <li class="quick-link"><a href="AccountSummary.jsp">Account Details</a></li>
               <li class="quick-link"><a href="f_paymentMode.jsp">Fund Transfer</a></li>
-              <li class="quick-link"><a href="f_NetBankingLogin.jsp">Logout</a></li>
+              <li class="quick-link"><a href="Login.jsp">Logout</a></li>
             </ul>
         </div>
       </div>

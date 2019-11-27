@@ -41,6 +41,7 @@
 					<div class="article">
 						<h2 text-transform: uppercase, color: green>Online Banking Services</h2>
 						<div class="clr"></div>
+						<img scr="f_images/home-bg.jpg" height="100%" width="100%">
 						<p text-indent: 50px; text-align: justify; letter-spacing: 3px;>
 							As a value network, Jan Dhan aims at seamlessly integrating as many services as needed into one comprehensive process to complete a financial service in an effective and timely manner. 
 							It is implied that a Jan Dhan would include certain features in addition to providing a financial service. There must be means for managing, deploying and delivery of the services' environment. 
@@ -49,16 +50,6 @@
 							These security mechanisms must be in compliance with laws of data protection for the jurisdictions involved. With the proliferation and acceptance of BaaS, the emergence and rapid growth of FinTech can be expected. 
 							FinTech is “a business that aims at providing financial services by making use of software and modern technology
 						</p>
-						<pre>
-                        Payments/Transfer
-						Funds Transfer
-						Intra-Bank Transfer
-						RTGS/NEFT
-						Credit Card (VISA)
-						IMPS Payments
-						NRI eZ Trade Funds Transfer
-                        </pre>
-                        
 					</div>
 				</div>
 

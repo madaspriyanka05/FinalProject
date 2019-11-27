@@ -42,29 +42,34 @@
             <br>
             <form action="f_NEFT.lti" method="POST">
                     <table id="funds">
-                            <caption>Initiate (NEFT) Transaction</caption>
+                            <caption>INITIATE TRANSACTION</caption>
                             <tr><td>&nbsp;</td></tr>
-                            <!-- <tr>
+                            <tr>
                                 <td><h3>From Account Name:<h3></h3></td>
-                                <td><input type="text" name="" placeholder="Minions" id="RTGSfromAccName"></td>
-                            </tr>-->
+                                <td><input type="text" name="fromAccountName" id="fromAccName" value="${ sessionScope.user.customeraccount.accountId }" readonly></td>
+                            </tr>
                             <tr>
                                 <td><h3>From Account Number:<h3></h3></td>
-                                <td><input type="text" name="fromAccountId" size="35" id="RTGSfromAccNumber" value="${ sessionScope.user.customeraccount.accountId }" readonly ></td>
+                                <td><input type="text" name="fromAccountId" size="35" id="fromAccNumber" value="${ sessionScope.user.customeraccount.accountId }" readonly ></td>
                             </tr> 
                             <tr>
                                 <td><h3>To Account Name:<h3></h3></td>
                                 <td>
                             <select name="toAccountName">
-                              <option value="What is your favorite color ?" size="35">What is your favorite color ?</option>
-                              <option value="What is your pet name ?">What is your pet name ?</option>
-                              <option value="Which is your birthplace ?">Which is your birthplace ?</option>
+                              <option value="priyanka" size="35">priyanka</option>
+                              <option value="Jyoti">Jyoti</option>
+                              <option value="seema">seema</option>
                             </select>
                           </td>
                             </tr>
                             <tr>
                                     <td><h3>To Account Number:<h3></h3></td>
-                                    <td><input type="text" name="toAccountId" placeholder="123456789" size="35" id="RTGStoAccNumber"></td>
+                                    <td>
+                                    <select name="toAccountId">
+                              <option value="1234" size="35">1234</option>
+                              <option value="7707">7707</option>
+                              <option value="5678">5678</option>
+                            </select></td>
                                 </tr>
                              <tr>
                                 <td><h3>Type of Payment:<h3></h3></td>

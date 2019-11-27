@@ -25,7 +25,7 @@
                         <li ><a href="u_index.jsp">Home</a></li>
                         <li><a href="AccountSummary.jsp">My Accounts</a></li>
                         <li class="active"><a href="AccountStatement.jsp">Account Statement</a></li>
-                        <li><a href="f_NetBankingLogin.jsp">Funds Transfer</a></li>
+                        <li><a href="f_paymentMode.jsp">Funds Transfer</a></li>
                         <li><a href="ChangeUserPassword.jsp">Change Password</a></li>
                         <li><a href="Login.jsp">LogOut</a></li>
                 	 </ul>
