@@ -6,8 +6,32 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="changePass.css" rel="stylesheet">
+    <link href="f_style.css" rel="stylesheet" type="text/css" />
     <!------ Include the above in your HEAD tag ---------->
 </head>
+<body>
+	<div class="main">
+        <div class="header">
+            <div class="header_resize">
+                <div class="logo">
+                    <marquee><h1><a href="index.html"><span>Jan Dhan</span></a>
+                        <small>Online Banking Services</small></h1></marquee>
+                </div>
+                <div class="menu_nav">
+                    <!-- Navigation -->
+
+                    <ul>
+                        <li><a href="Login.jsp">LOGIN</a></li>
+                        <li><a href="index.jsp">GO BACK</a></li>
+                        <li class="active"><a href="ChangeUserPassword.jsp">Change Password</a></li>
+                        
+                	 </ul>
+                </div>
+            </div>
+        </div>
+	
+	
+	
 <div class="container">
     <div class="row">
         <div class="col-sm-4 text-center centered">
@@ -35,8 +59,10 @@
 
         </div>
     </div>
+    <center>
     <div class="form-actions">
         <button type="submit" class="btn btn-primary">Submit</button>
         <button type="button" class="btn">Cancel</button>
     </div>
+    </center>
 </div>

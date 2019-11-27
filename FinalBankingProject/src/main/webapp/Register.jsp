@@ -25,7 +25,7 @@
                     <!-- Navigation -->
 
                     <ul>
-                        <li><a href="Register.jsp">REGISTER</a></li>
+                        <li><a href="Login.jsp">LOGIN</a></li>
                         <li><a href="index.jsp">GO BACK</a></li>
                     </ul>
                 </div>
@@ -149,11 +149,9 @@
                                     <td><input type="number" placeholder="Enter MobileNumber" name="mobileNo" size="20" required></td><br>
                                 </td>
                             </tr>
-							<tr><td>&nbsp;</td></tr>
                             <tr>
-                                <td align="center"><button class="button">Submit</button>
-                                <td align="center"><button class="button" type="reset" style="float:left" value="Reset">Reset</button></td>
-
+                                <td><button  class="button">Submit</button></td>
+                                <td><button class="button" type="reset"  value="Reset">Reset</button></td>
                             </tr>
                         </table>
 						</form>

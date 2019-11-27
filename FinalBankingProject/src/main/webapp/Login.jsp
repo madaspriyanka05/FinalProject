@@ -72,18 +72,12 @@
 
 <div class="login" align="center">
 <br><br><br>
-
+	
+	<b>${ message }</b>
 
     <form method="post" action="Login.lti" onsubmit="return check_form();" id="form1">
         <p><input type="text" name="emailId" value="" placeholder="Username or Email" id="uname"></p>
         <p><input type="password" name="password" value="" placeholder="Password" id="psw"></p>
-        <p class="remember_me">
-            <label>
-              <input type="checkbox" name="remember_me" id="remember_me">
-              Remember me on this computer
-            </label>
-            
-        </p>
         <p class="submit"><input type="submit" name="commit" value="Login"></p>
     </form>
 </div>

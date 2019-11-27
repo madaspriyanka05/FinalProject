@@ -29,11 +29,10 @@ public class CustomerRepository implements CustomerInterface {
 	public Customer readLogin(String username, String password) 
 	{
 		
-		String qu = "select a from Customer as a where a.emailId=:username and a.password=:password";
+		String qu = "select a from Customer as a join fetch a.customeraccount acc where a.emailId=:username and a.password=:password";
 		Query q1=entityManager.createQuery(qu);
 		q1.setParameter("username",username);
 		q1.setParameter("password",password);
-		List list=q1.getResultList();
 		
 		Customer l1=(Customer)q1.getSingleResult();
 		return l1;

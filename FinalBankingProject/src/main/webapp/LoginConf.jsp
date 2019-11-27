@@ -22,7 +22,7 @@
         <div class="content">
             <div class="content_resize">
             <br><br> 
-				<h1 style="color:blue;">YOU ARE SUCCESSFULLY LOGGED IN !!</h1>
+				<h1 style="color:blue;">Welcome back, ${ sessionScope.user.firstname } ${ sessionScope.user.lastname }</h1>
                 <div class="clr"></div>
                 <br><br>
                 <center>

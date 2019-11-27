@@ -23,17 +23,14 @@
       </div>
       <div class="menu_nav">
         <ul>
-          <li class="active"><a href="PaymentMode.html">Payments/Transfers</a></li>
-        
+        		<li><a href="u_index.jsp">Home</a></li>
+                <li ><a href="AccountSummary.jsp">My Accounts</a></li>
+                <li><a href="AccountStatement.jsp">Account Statement</a></li>
+                <li class="active"><a href="f_paymentMode.jsp">Funds Transfer</a></li>
+                <li><a href="ChangeUserPassword.jsp">Change Password</a></li>
+                <li><a href="Login.jsp">LogOut</a></li>
         </ul>
-        <div class="searchform">
-          <form id="formsearch" name="formsearch" method="post" action="#">
-            <span>
-            <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" placeholder="Search our site:" type="text" />
-            </span>
-            <input name="button_search" src="f_images/search_btn.gif" class="button_search" type="image" />
-          </form>
-        </div>
+        
       </div>
     </div>
   </div>
@@ -53,7 +50,7 @@
                             </tr>-->
                             <tr>
                                 <td><h3>From Account Number:<h3></h3></td>
-                                <td><input type="text" name="fromAccountId" placeholder="session se" size="35" id="RTGSfromAccNumber"></td>
+                                <td><input type="text" name="fromAccountId" size="35" id="RTGSfromAccNumber" value="${ sessionScope.user.customeraccount.accountId }" readonly ></td>
                             </tr> 
                             <tr>
                                 <td><h3>To Account Name:<h3></h3></td>
@@ -84,10 +81,7 @@
                                 <td><input type="text" name="amount" placeholder="100" size="35" id="RTGSamount"></td>
                             </tr>
                              <tr>
-                                <td><h3>Date:<h3></h3></td>
-                                <td><input type="date" name="dateandtime" placeholder="24-11-2019" height="95px" id="RTGSamount"></td>
-                            	<%-- <%= (new java.util.Date()).toLocaleString()%> --%>
-                            </tr>
+                                <td>                            </tr>
                             <tr><td>&nbsp;</td></tr>
                             <tr>
                                 <th><input type="submit" value="SUBMIT"></th>
@@ -113,10 +107,10 @@
             <h2><span>Quick Links</span></h2>
             <div class="clr"></div>
             <ul class="sb_menu">
-               <li><a href="AccountSummary.jsp ">Account Summary</a></li>
-            <li><a href="f_Index.jsp">Fund Transfer</a></li>
-            <li><a href="AccountStatement.jsp ">Account Statement</a></li>
-              <li class="quick-link"><a href="LogOut.jsp">Logout</a></li>
+              	<li class="quick-link"><a href="AccountSummary.jsp ">Account Summary</a></li>
+            	<li class="quick-link"><a href="AccountStatement.jsp ">Account Statement</a></li>
+            	<li class="quick-link"><a href="f_paymentMode.jsp">Fund Transfer</a></li>
+              	<li class="quick-link"><a href="f_NetBankingLogin.jsp">Logout</a></li>
             </ul>
         </div>
       </div>
@@ -132,5 +126,8 @@
       </div>
   </div>
 </div>
+<script>
+document.getElementById('dt').value = new Date().toDateInputValue();
+</script>
 </body>
 </html>

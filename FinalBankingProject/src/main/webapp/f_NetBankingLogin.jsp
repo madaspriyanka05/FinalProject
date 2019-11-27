@@ -17,10 +17,10 @@
       </div>
       <div class="menu_nav">
         <ul>
-          <li><a href="index.html">My Accounts</a></li>
-          <li><a href="">My Profile</a></li>
-          <li class="active"><a href="PaymentMode.html">Payments/Transfers</a></li>
-          <li><a href="">Enquiries</a></li>
+          <li><a href="AccountSummary.jsp">My Accounts</a></li>
+          <!-- <li><a href="">My Profile</a></li> -->
+          <li class="active"><a href="f_payMentmode.jsp">Payments/Transfers</a></li>
+          <li><a href="Login.jsp">Logout</a></li>
         </ul>
        
       </div>
@@ -78,9 +78,7 @@
             <h2><span>Quick Links</span></h2>
             <div class="clr"></div>
             <ul class="sb_menu">
-              <li class="quick-link"><a href="#">Account Details</a></li>
-              <li class="quick-link"><a href="#">Fund Transfer</a></li>
-              <li class="quick-link"><a href="#">Logout</a></li>
+              <li class="quick-link"><a href="AccountSummary.jsp">Account Details</a></li>
             </ul>
         </div>
       </div>

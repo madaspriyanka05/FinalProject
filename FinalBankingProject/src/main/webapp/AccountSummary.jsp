@@ -25,10 +25,11 @@
 
                     <ul>
                         <li ><a href="u_index.jsp">Home</a></li>
+                        <li class="active"><a href="AccountSummary.jsp">My Accounts</a></li>
                         <li><a href="AccountStatement.jsp">Account Statement</a></li>
                         <li><a href="f_NetBankingLogin.jsp">Funds Transfer</a></li>
                         <li><a href="ChangeUserPassword.jsp">Change Password</a></li>
-                        <li><a href="LogOut.jsp">LogOut</a></li>
+                        <li><a href="Login.jsp">LogOut</a></li>
                 	 </ul>
                 </div>
             </div>
@@ -49,14 +50,14 @@
         <tr>
             <th> Account Number </th>
             <th> Holder Name </th>
-            <th> Account Type </th>
+            <th> Opening Date </th>
             <th> Account Balance </th>
         </tr>
         <tr>
-            <td> 1234 </td>
-            <td> pooja </td>
-            <td> saving </td>
-            <td> 15000 </td>
+            <td> ${ sessionScope.user.customeraccount.accountId }  </td>
+            <td> ${ sessionScope.user.firstname } ${ sessionScope.user.lastname } </td>
+            <td> ${ sessionScope.user.customeraccount.openDate } </td>
+            <td> ${ sessionScope.user.customeraccount.balance } </td>
         </tr>
     </table>
       </div>

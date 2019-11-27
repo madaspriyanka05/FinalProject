@@ -41,7 +41,6 @@
     </property>
 </bean>
 
-<!-- Bean tag is used to craete the objects where annotations are not there -->
 
 <!-- Following code is written for Providing support for transaction management -->
 <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">

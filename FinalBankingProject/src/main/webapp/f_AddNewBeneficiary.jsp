@@ -16,20 +16,11 @@
       </div>
       <div class="menu_nav">
         <ul>
-          <li><a href="index.html">My Accounts</a></li>
-          <li><a href="">My Profile</a></li>
-          <li class="active"><a href="PaymentMode.html">Payments/Transfers</a></li>
-          <li><a href="">e-Services</a></li>
-          <li><a href="">Enquiries</a></li>
+          <li><a href="AccountSummary.jsp">My Accounts</a></li>
+          <li class="active"><a href="f_paymentMode.jsp">Payments/Transfers</a></li>
+          <li><a href="Login.jsp">Logout from Jan Dhan</a></li>
         </ul>
-        <div class="searchform">
-          <form id="formsearch" name="formsearch" method="post" action="#">
-            <span>
-            <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" placeholder="Search our site:" type="text" />
-            </span>
-            <input name="button_search" src="f_images/search_btn.gif" class="button_search" type="image" />
-          </form>
-        </div>
+        
       </div>
     </div>
   </div>
@@ -77,10 +68,9 @@
             <h2><span>Quick Links</span></h2>
             <div class="clr"></div>
             <ul class="sb_menu">
-              <li class="quick-link"><a href="#">Account Details</a></li>
-              <li class="quick-link"><a href="#">Fund Transfer</a></li>
-              <li class="quick-link"><a href="#">View Beneficiaries</a></li>
-              <li class="quick-link"><a href="Login.jsp">Logout</a></li>
+              <li class="quick-link"><a href="AccountSummary.jsp">Account Details</a></li>
+              <li class="quick-link"><a href="f_paymentMode">Fund Transfer</a></li>
+              <li class="quick-link"><a href="f_NetBankingLogin.jsp">Logout</a></li>
             </ul>
         </div>
       </div>

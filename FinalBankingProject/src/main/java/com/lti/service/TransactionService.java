@@ -1,5 +1,6 @@
 package com.lti.service;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -7,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.lti.Interface.GenericRepositoryInterface;
+import com.lti.Interface.TransactionInterface;
 import com.lti.Interface.TransactionServiceInterface;
 import com.lti.entity.Account;
-import com.lti.entity.NetBankAccount;
 import com.lti.entity.Transaction;
 
 @Service
@@ -19,6 +20,9 @@ public class TransactionService  implements TransactionServiceInterface
 	@Autowired
 	private GenericRepositoryInterface genericRepositoryInterface;
 
+	@Autowired
+	private TransactionInterface transactionInterface;
+	
 	public void  transfer(int accid, int baccid, double amount, String type) 
 	{
 		
@@ -35,7 +39,7 @@ public class TransactionService  implements TransactionServiceInterface
 			t1.setAmount(amount);
 			t1.setFromAccount(acc1);
 			t1.setToAccount(acc2);
-			t1.setDateandtime(LocalDateTime.now());
+			t1.setDateandtime(LocalDate.now());
 
 			genericRepositoryInterface.upsert(t1);
 		}
@@ -44,44 +48,9 @@ public class TransactionService  implements TransactionServiceInterface
 		}
 	}
 
-	public List<Transaction> transferAmount(Transaction txdata, NetBankAccount netBankAccountId, Account accountId) {
-		
-		return null;
-	}
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public List<Transaction> fetch(int accId, LocalDate startDate, LocalDate endDate) {
+		return transactionInterface.fetch(accId, startDate, endDate);	
+	}	
 	
 	/*public List<Transaction> transferAmount(Transaction txdata, NetBankAccount netBankAccountId, Account accountId)
 	{

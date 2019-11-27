@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <head>
 	<title>JAN DHAN BANK</title>
     <meta charset="UTF-8">
@@ -22,10 +23,11 @@
 
                     <ul>
                         <li ><a href="u_index.jsp">Home</a></li>
-                        <li><a href="AccountSummary.jsp">Account Summary</a></li>
+                        <li><a href="AccountSummary.jsp">My Accounts</a></li>
+                        <li class="active"><a href="AccountStatement.jsp">Account Statement</a></li>
                         <li><a href="f_NetBankingLogin.jsp">Funds Transfer</a></li>
                         <li><a href="ChangeUserPassword.jsp">Change Password</a></li>
-                        <li><a href="LogOut.jsp">LogOut</a></li>
+                        <li><a href="Login.jsp">LogOut</a></li>
                 	 </ul>
                 </div>
             </div>
@@ -43,21 +45,16 @@
    
     <br/>
     <br/>
-    <table border="5" align="center">
-        <tr>
-            <th> Account Number </th>
-            <th> Holder Name </th>
-            <th> Account Type </th>
-            <th> Transaction Amount </th>
-        </tr>
-        <tr>
-            <td> 1234 </td>
-            <td> pooja </td>
-            <td> saving </td>
-            <td> 15000 </td>
-        </tr>
-    </table>
-
+    <form method="post" action="FetchStatement.lti">
+ 		Start Date : <input type="date" name="startDate" />
+ 		End Date : <input type="date" name="endDate" />
+ 		<button type="submit">Fetch Statement</button>
+ 	</form>
+ 	
+ 	<c:forEach items = "${ transactions }" var = "t">
+ 		${ t.amount }
+ 	</c:forEach>
+ 	
     </div>
 </body>
 </html>

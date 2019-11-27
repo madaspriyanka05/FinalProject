@@ -28,7 +28,7 @@ public class NetBankingController
 		
 		netBankingServiceInterface.registerAdd(netbank);
 		
-		model.put("user", netbank);
+		session.setAttribute("accountId", netbank.getNetbankingAccountId());
 		return "f_paymentMode.jsp";
 		}
 		catch(Exception e)

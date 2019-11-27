@@ -1,17 +1,12 @@
 package com.lti.entity;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -33,7 +28,7 @@ public class Transaction
 	private String tType;
 	
 	@DateTimeFormat
-	private LocalDateTime dateandtime;
+	private LocalDate dateandtime;
 	
 	@OneToOne
 	@JoinColumn(name="toaccountid")
@@ -117,13 +112,13 @@ public class Transaction
 
 
 
-	public LocalDateTime getDateandtime() {
+	public LocalDate getDateandtime() {
 		return dateandtime;
 	}
 
 
 
-	public void setDateandtime(LocalDateTime dateandtime) {
+	public void setDateandtime(LocalDate dateandtime) {
 		this.dateandtime = dateandtime;
 	}
 

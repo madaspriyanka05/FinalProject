@@ -35,6 +35,7 @@ public class LoginController
 		}
 		catch(Exception e)
 		{
+			model.put("message", "Invalid Username/Password");
 			return "Login.jsp";
 		}
 		
@@ -51,7 +52,7 @@ public class LoginController
 	}
 	
 	@RequestMapping(path = "f_NetBankingLogin.lti", method = RequestMethod.POST)
-	public String loginNGO(@RequestParam("username") String username, @RequestParam("netPassword") String password,
+	public String loginNetBanking(@RequestParam("username") String username, @RequestParam("netPassword") String password,
 			ModelMap model) 
 	{
 
