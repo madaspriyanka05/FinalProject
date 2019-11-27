@@ -39,6 +39,7 @@
 						
 					</div>
 					<div class="article">
+					<img scr="f_images/home-bg.jpg" height="100%" width="100%">
 						<h2 text-transform: uppercase, color: green>Online Banking Services</h2>
 						<div class="clr"></div>
 						<img scr="f_images/home-bg.jpg" height="100%" width="100%">
@@ -48,9 +49,10 @@
 							The services must of course be in legal compliance with the banking laws in the regions where it is made available, with (at least) one entity within the process possessing a banking license. 
 							Of utmost importance is the assurance that proper mechanisms are in place to provide security, such as strong authentication and additional measures to protect sensitive information from unauthorized access throughout the entire process. 
 							These security mechanisms must be in compliance with laws of data protection for the jurisdictions involved. With the proliferation and acceptance of BaaS, the emergence and rapid growth of FinTech can be expected. 
-							FinTech is “a business that aims at providing financial services by making use of software and modern technology
+							FinTech is “a business that aims at providing financial services by making use of software and modern technology.
 						</p>
 					</div>
+					<img scr="f_images/home-bg.jpg" height="100%" width="100%">
 				</div>
 
 				<div class="clr"></div>

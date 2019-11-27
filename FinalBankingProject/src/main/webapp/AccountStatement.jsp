@@ -51,8 +51,19 @@
  		<button type="submit">Fetch Statement</button>
  	</form>
  	
+ 	<table border="5" align="center">
+        <tr>
+            <th> Transaction Id </th>
+            <th> Amount </th>
+            <th>Type </th>
+        </tr>
+ 	
  	<c:forEach items = "${ transactions }" var = "t">
- 		${ t.amount }
+ 	<tr>
+ 		<td>${ t.tid }</td>
+ 		<td>${ t.amount }</td>
+ 		<td>${ t.tType }</td>
+ 		</tr>
  	</c:forEach>
  	
     </div>

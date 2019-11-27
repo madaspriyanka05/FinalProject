@@ -62,17 +62,11 @@
     </table>
       </div>
 
-                <div class="clr"></div>
+       
             </div>
         </div>
 
-        <div class="footer">
-            <div class="footer_resize">
-                <p class="lf">Copyright &copy; <a href="#">Net Banking</a>. All Rights Reserved</p>
-                <p class="rf">Design by <a target="_blank" href="http://www.freewebsitetemplatez.com/">FreeWebsiteTemplatez</a></p>
-                <div class="clr"></div>
-            </div>
-        </div>
+       
     </div>
 
 </body>

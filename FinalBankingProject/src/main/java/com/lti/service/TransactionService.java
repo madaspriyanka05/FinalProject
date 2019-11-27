@@ -52,67 +52,6 @@ public class TransactionService  implements TransactionServiceInterface
 		return transactionInterface.fetch(accId, startDate, endDate);	
 	}	
 	
-	/*public List<Transaction> transferAmount(Transaction txdata, NetBankAccount netBankAccountId, Account accountId)
-	{
-		Transaction transaction = new Transaction();
-		
-		String ttype = txdata.gettType();
-		
-		Account fromAccount =  (Account)genericRepositoryInterface.fetchById(Account.class, netBankAccountId);
-		
-		Account toAccId = txdata.getToAccountId();
-		Account toAccount = (Account)genericRepositoryInterface.fetchById(Account.class, toAccId);
-		
-		double amount = txdata.getAmount();
-		
-		//NEFT
-		if(ttype.equals("neft") || ttype.equals("NEFT"))
-		{
-			if(amount > 200000)
-				throw new CannotCreateTransactionException("Maximum limit for NEFT transfer is Rs. 2 Lacs");
-			else if(amount <=10000)
-				charge = 1.18;
-			else if(amount<10000 && amount>100000)
-				charge= 2.36;
-			else if(amount<100000 && amount>200000)
-				charge= 3.54;
-		}
-		
-		if(fromAccount.getBalance() < amount) 
-		{
-			throw new CannotCreateTransactionException("Insufficient Balance to transfer");
-		}
-		else
-		{
-			double balance = fromAccount.getBalance() - (amount + charge);
-			if(balance < MINIMUM_BALANCE)
-				throw new CannotCreateTransactionException("Minimum account balance has to maintained");
-			else
-			{
-				try
-				{
-					fromAccount.setBalance(balance);
-					toAccount.setBalance(toAccount.getBalance()+amount);
-					transaction.setToAccountId(toAccount);
-					transaction.settType(txdata.gettType());
-					transaction.setAmount(amount);
-					transaction.setDateandtime(LocalDateTime.now());
-					
-					genericRepositoryInterface.upsert(transaction);
-					
-					
-					return (List<Transaction>) transaction;
-				}
-				catch(Exception e)
-				{
-					
-				}
-			}
-		}
-		return null;
-		
 	
-	}
-*/
 
 }
