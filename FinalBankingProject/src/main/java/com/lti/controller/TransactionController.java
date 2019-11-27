@@ -27,7 +27,7 @@ public class TransactionController
 	@Autowired
 	private TransactionServiceInterface transactionServiceInterface;
 	
-
+	//Fund transferring
 	@RequestMapping(path="f_NEFT.lti",method=RequestMethod.POST)
 	private String neftTransfer(Transaction transaction,
 			@RequestParam(name="fromAccountId") int accid,
@@ -40,7 +40,7 @@ public class TransactionController
 		{
 			transactionServiceInterface.transfer(accid, baccid, amount, type);
 			session.setAttribute("accountId", transaction.getFromAccount());
-			return "AccountSummary.jsp";
+			return "TransactionDone.jsp";
 		}
 		
 		catch(Exception e) {
@@ -49,6 +49,7 @@ public class TransactionController
 		}
 	}
 	
+	//FetchStatement
 	@RequestMapping(path="FetchStatement.lti", method=RequestMethod.POST)
 	private String fetchStatement(@RequestParam("startDate") String startDate, @RequestParam("endDate") String endDate, ModelMap model) {
 		Customer customer = (Customer) model.get("user");

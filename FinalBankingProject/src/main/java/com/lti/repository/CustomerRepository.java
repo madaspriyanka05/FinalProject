@@ -36,16 +36,7 @@ public class CustomerRepository implements CustomerInterface {
 		
 		Customer l1=(Customer)q1.getSingleResult();
 		return l1;
-		
-		
-/*
-		if ((list != null) && (list.size() > 0)) {
-			System.out.println("Approved");
-			return 1;
-		}
 
-		System.out.println("Wrong Username and Password");
-		return 0;*/
 	}
 
 	public NetBankAccount readNetLogin(String username, String password) 

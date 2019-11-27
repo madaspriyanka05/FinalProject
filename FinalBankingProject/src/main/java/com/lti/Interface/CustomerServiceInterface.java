@@ -9,8 +9,9 @@ public interface CustomerServiceInterface
 	public void register(Customer cust);
 	
 	public Customer checkLogin(String username, String password);
+	
+	//In progress
 	public NetBankAccount checkNetLogin(String username, String password);
-
 	public NetBankAccount checkTransactionPassword(String transactionPass);
 	
 }

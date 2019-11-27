@@ -30,7 +30,6 @@ public class LoginController
 		Customer login = customerServiceInterface.checkLogin(username, password);
 
 		model.put("user", login);
-		System.out.println("okkk");
 		return "LoginConf.jsp";
 		}
 		catch(Exception e)
@@ -39,18 +38,8 @@ public class LoginController
 			return "Login.jsp";
 		}
 		
-		/*boolean i= customerServiceInterface.checkLogin(username,password);
-		if(i)
-		{
-			return "f_paymentMode.jsp";
-		}
-		else
-		{
-			return "Login.jsp";
-		}*/
-		
 	}
-	
+	//In Progress
 	@RequestMapping(path = "f_NetBankingLogin.lti", method = RequestMethod.POST)
 	public String loginNetBanking(@RequestParam("username") String username, @RequestParam("netPassword") String password,
 			ModelMap model) 
@@ -59,15 +48,11 @@ public class LoginController
 		try 
 		{
 			NetBankAccount login = customerServiceInterface.checkNetLogin(username, password);
-
 			model.put("user", login);
-			System.out.println("okkk");
 			return "f_paymentMode.jsp";
 
-		}
-
-		catch (Exception e) {
-			System.out.println("not okk");
+		}catch (Exception e) {
+		
 			model.put("message", "invalid username/password");
 			return "u_index.jsp";
 

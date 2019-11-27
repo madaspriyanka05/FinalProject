@@ -17,6 +17,7 @@ public class TransactionRepository implements TransactionInterface {
 	@PersistenceContext
 	private EntityManager entityManager;
 	
+	//fetching the data from transaction
 	public List<Transaction> fetch(int accId, LocalDate startDate, LocalDate endDate) {
 		return entityManager
 				.createQuery("select t from Transaction t join fetch t.fromAccount fromAcc join fetch t.toAccount toAcc where fromAcc.accountId = :id and t.dateandtime between :st and :dt")

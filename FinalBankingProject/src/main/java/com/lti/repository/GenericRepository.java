@@ -14,26 +14,19 @@ public class GenericRepository  implements GenericRepositoryInterface
 	@PersistenceContext
 	EntityManager entityManager;
 	
+	//Inserting or updating the record in db
 	@Transactional
 	public void upsert(Object obj) {
 		entityManager.merge(obj);
 	}
 
+	
+	//fetching the data
 	public Object fetchById(Class clazz, Object pk)
 	{
 		return entityManager.find(clazz, pk);
 	}
 
-	@Transactional
-	public void delete(Class clazz, Object pk) {
-		Object obj = fetchById(clazz, pk);
-		entityManager.remove(obj);
-	}
 	
-	public Object fetchData(Class clazz, Object pk)
-	{
-		
-		Object obj = entityManager.find(clazz, pk);
-		return obj;
-	}
+	
 }
